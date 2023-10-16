@@ -2,7 +2,7 @@
 layout: page
 title: Assignment 2
 permalink: /assignment-2
-nav_order: 1
+nav_order: 2
 ---
 
 ## Amsterdam TourBoats
