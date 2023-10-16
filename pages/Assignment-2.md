@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Assignment 1
+title: Assignment 2
 permalink: /assignment-2
 nav_order: 1
 ---
