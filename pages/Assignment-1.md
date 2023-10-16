@@ -8,4 +8,4 @@ nav_order: 1
 ## Amsterdam Paralympics
 In Assignment 1...
 
-Go to the next assignment: [Opzetten]({{site.baseurl}}/assignment-2)
+Go to the next assignment: [TourBoats]({{site.baseurl}}/assignment-2)
