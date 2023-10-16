@@ -8,4 +8,4 @@ nav_order: 1
 ## Amsterdam Housing
 In Assignment 3...
 
-Go to the next assignment: [Opzetten]({{site.baseurl}}/assignment-4)
+Go to the next assignment: [Transport]({{site.baseurl}}/assignment-4)
