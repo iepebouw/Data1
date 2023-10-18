@@ -18,7 +18,14 @@ There are several requirements and wishes to take into account. First of all, th
 indigestion, nausea and stomach-ache. The water in the canals should be regularly checked and monitored, especially during the weeks around the event. Heavy weather conditions influence the quality of the water, because this could lead to overflowing sewage systems. To conlude, data about the intensity of the use of the canals is needed, popular routes for commercial and canal boats and the water quality are needed. 
 
 In the table below we listed useful data-sets covering the above mentioned requirements. 
-
+| Rekeningnaam                                     | Rekeningnummer | Rekeningsoort   | Hoofdrekening                  | Omschrijving                     |
+|:-------------------------------------------------|:---------------|:----------------|:-------------------------------|----------------------------------|
+| 010 Bedrijfsgebouwen en terreinen                | 010            | Activa          | Nieuwe rekening op hoofdniveau | Waarde van onroerend goed        |
+| 020 Machines en installaties                     | 020            | Activa          | Nieuwe rekening op hoofdniveau | Waarde van machines              |
+| 040 Eigen vermogen                               | 040            | Eigen vermogen  | Nieuwe rekening op hoofdniveau | Vermogen                         |
+| 041 Privéstortingen                              | 041            | Eigen vermogen  | Nieuwe rekening op hoofdniveau | Stortingen als privé             |
+| 042 Privéonttrekkingen                           | 042            | Eigen vermogen  | Nieuwe rekening op hoofdniveau | Onttrekkingen als privé          |
+| 070 Schulden                                     | 070            | Vreemd vermogen | Nieuwe rekening op hoofdniveau | Tegoeden van investeringen       |
 
 
 
