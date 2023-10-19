@@ -11,6 +11,13 @@ has_children: yes
 
 Below the complete code for excercise 4. Just copy/paste in the top right corner to use it yourself:
 
+_make sure the following libraries are installed:_
+- Pandas
+- Matplotlib
+- Osmnx
+- Networkx
+- overpy
+
 ```python
 import pandas as pd 
 from pandas import DataFrame 
