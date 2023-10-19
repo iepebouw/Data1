@@ -10,3 +10,6 @@ favicon_ico: "/assets/favicon.ico"
 
 markdown_extensions:
   - attr_list
+
+kramdown:
+  input: Kramdown
