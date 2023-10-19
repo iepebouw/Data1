@@ -18,9 +18,10 @@ _make sure the following libraries are installed:_
 - plotly
 
 _Download the following file and past the path before #read Airbnbn file_
+```html
+<a href="[listings.csv](http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2023-09-03/visualisations/listings.csv)" target="_blank">Opens in new tab</a>
 
-[listings.csv](http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2023-09-03/visualisations/listings.csv){:target="_blank"}
-
+```
 
 Runtime code: Around 1m 30s
 
