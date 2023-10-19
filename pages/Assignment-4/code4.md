@@ -153,15 +153,6 @@ print(len(result.nodes))
 print(cafe_nodes) 
   
 # get building footprints 
- 
-
- 
-# plot highway edges in yellow, railway edges in red 
-
- 
-fig, ax = ox.plot_graph(city1, bgcolor='k', node_color=nc, 
-                        node_size=1, edge_linewidth=0.5, 
-                        show=False, close=False) 
 
  
 # add building footprints in 50% opacity white 
