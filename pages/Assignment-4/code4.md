@@ -45,7 +45,9 @@ pt = ox.graph_to_gdfs(city, edges=False).unary_union.centroid
 bbox = ox.utils_geo.bbox_from_point(start, dist=5000) 
 fig, ax = ox.plot_graph_route(city,race,bbox=bbox)
 
-#Create two emptie lists, one for the latitude and one for the longtitude:
+#-------------------------------------------------------------------------------------------------
+
+#Create two empty lists, one for the latitude and one for the longtitude:
 lat = [] 
 long = [] 
 #Calculate the latitude and longtitude for each point and put them in the corresponding list:
@@ -60,6 +62,36 @@ print(sum(lat)/len(lat))
 # DO the same for the longtitudes
 print(sum(long)/len(long))
 
+#-------------------------------------------------------------------------------------------------
+
+import overpy 
+walking_radius = 500 #We decided on a 500 meter radius 
+ 
+# getting information about public transport stops 
+query = f""" 
+    [out:json]; 
+    ( 
+        node["public_transport"="stop_position"] 
+            (around:{walking_radius},{start[0]},{start[1]}); 
+        node["public_transport"="stop_position"] 
+            (around:{walking_radius},{eind[0]},{eind[1]}); 
+    ); 
+    out center; 
+""" 
+api = overpy.Overpass() 
+result = api.query(query) 
+  
+# printing the results in a list 
+for node in result.nodes: 
+    print(f'Node: {node.tags.get("name", "Unknown")}, Location: ({node.lat}, {node.lon})') 
+print(len(result.nodes))
+
+#-------------------------------------------------------------------------------------------------
+
+#For this excercise we need a map including the roads. As we had a map with only the waterways we need to create a new map: 
+
+city1 = (ox.graph_from_place('Amsterdam, Netherlands'))  
+print(city1)  
 #Calculate the nearest location to these coordinates with reverse geocoding:
 from geopy.geocoders import Nominatim
 geolocator = Nominatim(user_agent="AMS")
@@ -81,4 +113,58 @@ punten = [start_node,eind_node,centr_node]
 #Now we calculate the centrality
 print("The degree centrality for the three nodes is:",nx.group_closeness_centrality(city1,punten)) # je kiest hiervoor omdat je iets wil zeggen over hoe verbonden de drie punten met elkaar zijn
 
+#-------------------------------------------------------------------------------------------------
+
+walking_radius = 800 #We decided on a 800 meter radius 
+
+# getting information about public transport stops 
+query = f""" 
+    [out:json]; 
+    ( 
+        node["amenity"="cafe"] 
+            (around:{walking_radius},{eind[0]},{eind[1]}); 
+        node["amenity"="restaurant"] 
+            (around:{walking_radius},{eind[0]},{eind[1]});         
+    ); 
+    out center; 
+""" 
+api = overpy.Overpass() 
+result = api.query(query) 
+
+ 
+# printing the results in a list 
+
+ 
+print(result.nodes) 
+
+ 
+cafe_nodes = [] 
+for node in result.nodes: 
+    cafe_nodes.append(node.id) 
+    print(f'Cafe or Restaurant: {node.tags.get("name", "Unknown")}, Location: ({node.lat}, {node.lon})') 
+print(len(result.nodes)) 
+print(cafe_nodes) 
+  
+# get building footprints 
+ 
+
+ 
+# plot highway edges in yellow, railway edges in red 
+
+ 
+fig, ax = ox.plot_graph(city1, bgcolor='k', node_color=nc, 
+                        node_size=1, edge_linewidth=0.5, 
+                        show=False, close=False) 
+
+ 
+# add building footprints in 50% opacity white 
+
+ 
+plt.show() 
+
+ 
+# pt = ox.graph_to_gdfs(city1, edges=False).unary_union.centroid 
+# bbox = ox.utils_geo.bbox_from_point(eind, dist=500) 
+# fig, ax = ox.plot_graph(city1,bbox=bbox) 
+# result.nodes.plot(ax=ax, color ="red", markersize = 5000) 
 ```
