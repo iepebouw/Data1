@@ -15,6 +15,16 @@ Even though the event will take place in 2024, it is still important to limit th
 | Grachtenmonitor 2022 | pdf | https://openresearch.amsterdam/nl/page/92981/grachtenmonitor-2022 | Information about ditribution of vignetten (q1), peak times (q2) |
 |WOWSA Rules & Regulations |URL|https://www.openwaterswimming.com/docs/rules-regulations/wowsa-rules-regulations/ | Rules and regulations regarding open water swimming, e.g. information about position boats |
 
+Question 1: How many of the canal boats currently in use are diesel/fossil fuel driven and how
+many boats are electrical driven?
+Vignettes are valid for one year, and thus need to be renewed every year. From the tabel below, we can conclude that there are 7350 boats in total in 2022, excluding passage boats. Only 34% of these vignettes is green or yellow, so only 34% of these boats is allowed to enter emission-free zones. Almost 31% of the boats is fully electrical driven. In 2024, a higher amount of green or yellow vignettes can be expected, since it approaches the enddate for the emission-free zones in 2025. Moreover, the municipality is installing more charging points for electric boats, to make the transition go faster.
+Add table from grachtenmonitor 2022 page 19
+
+Question 2: Are there peak times for the canals?
+The canals in the canalbelt are the most intensively used canals, but this also varies during the day. In the figure (add figure grachtenmonitor 2022 page 13), can be seen 
+
+
+
 
 
 Go to the next assignment: [Housing]({{site.baseurl}}/assignment-3)
