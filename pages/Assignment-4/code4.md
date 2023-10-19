@@ -18,6 +18,8 @@ _make sure the following libraries are installed:_
 - Networkx
 - overpy
 
+Runtime code: Around 1m 30s
+
 ```python
 import pandas as pd 
 from pandas import DataFrame 
