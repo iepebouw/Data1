@@ -19,7 +19,7 @@ _make sure the following libraries are installed:_
 
 _Download the following file and past the path before #read Airbnbn file_
 
-[listings.csv](http://data.insideairbnb.com){:target="_blank" rel="noopener"}
+[listings.csv]()
 
 
 Runtime code: Around 1m 30s
