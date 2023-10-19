@@ -10,4 +10,7 @@ Amsterdam has set progressive goals in order to comply with the Clean Air Policy
 
 Even though the event will take place in 2024, it is still important to limit the pollution levels in the swimming water and to have safe water quality. The municipality also wants to create ideal conditions to ensure high performances. In addition, the event must be energy neutral. To make sure that the swimming route of the Paralympics meets this requirements, we need several data sets. Data on the motor of the boats, peak hours on the canals, carbon footprint, wind and solar energy is in the table below.
 
+| Name | File type | Source | Comments|
+| -----------:|
+
 Go to the next assignment: [Housing]({{site.baseurl}}/assignment-3)
