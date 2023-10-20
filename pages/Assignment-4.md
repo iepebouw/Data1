@@ -11,6 +11,7 @@ has_children: true
 
 If the Paralympics become as big as we hope, we need a nice location for the Event Headquarters. Preferably, the Event Headquarters is close to the center of the swimming route, in a easily accessible location, with enough space for the stream of visitors and that could host a potential after party. 
 
+If you run the code in Python, you get the interactive map with all the cafes and restaurants in the radius of a 10 minute walk as a result.
 
 ## Table of contents
 {: .no_toc .text-delta }
