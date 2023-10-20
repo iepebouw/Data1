@@ -36,11 +36,9 @@ print(city)
 start = ox.geocode("Haarlemmerplein 50, 1013 HS Amsterdam") 
 print(start)
 
-#Endpoint of the race
 eind = ox.geocode("Olympisch Stadion 2, 1076 DE Amsterdam") 
 print(eind)
 
-#Closest point in the graph for the start- and endpoint 
 start_node = ox.distance.nearest_nodes(city, start[1], start[0], return_dist=False) 
 eind_node = ox.distance.nearest_nodes(city, eind[1], eind[0], return_dist=False) 
 print(start_node,eind_node)
@@ -54,9 +52,11 @@ pt = ox.graph_to_gdfs(city, edges=False).unary_union.centroid
 bbox = ox.utils_geo.bbox_from_point(start, dist=5000) 
 fig, ax = ox.plot_graph_route(city,race,bbox=bbox)
 
+
+
 #-------------------------------------------------------------------------------------------------
 
-#Create two empty lists, one for the latitude and one for the longtitude:
+#Create two emptie lists, one for the latitude and one for the longtitude:
 lat = [] 
 long = [] 
 #Calculate the latitude and longtitude for each point and put them in the corresponding list:
@@ -89,82 +89,70 @@ query = f"""
 """ 
 api = overpy.Overpass() 
 result = api.query(query) 
-  
+ 
 # printing the results in a list 
 for node in result.nodes: 
     print(f'Node: {node.tags.get("name", "Unknown")}, Location: ({node.lat}, {node.lon})') 
-print(len(result.nodes))
+print(len(result.nodes)) 
 
 #-------------------------------------------------------------------------------------------------
 
-#For this excercise we need a map including the roads. As we had a map with only the waterways we need to create a new map: 
-
-city1 = (ox.graph_from_place('Amsterdam, Netherlands'))  
-print(city1)  
 #Calculate the nearest location to these coordinates with reverse geocoding:
 from geopy.geocoders import Nominatim
 geolocator = Nominatim(user_agent="AMS")
 location = geolocator.reverse("52.3675863, 4.8659963")
-print(location.address)
+print(location)
 
-#For this excercise we need a map including the roads. As we had a map with only the waterways we need to create a new map:
-city1 = (ox.graph_from_place('Amsterdam, Netherlands')) 
-print(city1) 
-#Use the previously calculated address:
-centraal = ox.geocode("Wenslauerstraat 1C, 1053 AV Amsterdam") 
-#Calculate the nearest nodes of the coordinates in this new graph:
+#We calculate the nearest node for location
+centraal = ox.geocode("Wenslauerstraat 1C, 1053AV, Amsterdam") 
 start_node = ox.distance.nearest_nodes(city1, start[1], start[0], return_dist=False) 
 eind_node = ox.distance.nearest_nodes(city1, eind[1], eind[0], return_dist=False) 
 centr_node = ox.distance.nearest_nodes(city1, centraal[1], centraal[0], return_dist=False) 
-print(start_node,eind_node,centr_node) 
-punten = [start_node,eind_node,centr_node]
+print(start_node,eind_node,centr_node)
 
 #Now we calculate the centrality
-print("The degree centrality for the three nodes is:",nx.group_closeness_centrality(city1,punten)) # je kiest hiervoor omdat je iets wil zeggen over hoe verbonden de drie punten met elkaar zijn
+punten = [start_node,eind_node,centr_node] 
+print("The degree centrality for the three nodes is:",nx.group_closeness_centrality(city1,punten))
 
 #-------------------------------------------------------------------------------------------------
 
-walking_radius = 800 #We decided on a 800 meter radius 
-
-# getting information about public transport stops 
+import folium 
+walking_radius = 800 #We decided on a 500 meter radius 
+ 
+# getting information about the cafés and restaurants 
 query = f""" 
     [out:json]; 
     ( 
         node["amenity"="cafe"] 
             (around:{walking_radius},{eind[0]},{eind[1]}); 
         node["amenity"="restaurant"] 
-            (around:{walking_radius},{eind[0]},{eind[1]});         
+            (around:{walking_radius},{eind[0]},{eind[1]});       
     ); 
     out center; 
 """ 
 api = overpy.Overpass() 
 result = api.query(query) 
-
  
-# printing the results in a list 
-
- 
-print(result.nodes) 
-
- 
-cafe_nodes = [] 
+#Now we start a loop for every cafe and restaurant found in the area 
+cafe_name = [] 
+cafe_lat = [] 
+cafe_long = [] 
 for node in result.nodes: 
-    cafe_nodes.append(node.id) 
-    print(f'Cafe or Restaurant: {node.tags.get("name", "Unknown")}, Location: ({node.lat}, {node.lon})') 
-print(len(result.nodes)) 
-print(cafe_nodes) 
-  
-# get building footprints 
-
+    cafe_lat.append(node.lat) #add the lat to the list 
+    cafe_long.append(node.lon) #add the long to the list 
+    coor = str(node.lat),str(node.lon) #We make a string of the lat and the long 
+    address = geolocator.reverse(coor) #and reverse geocode the address to get the name of the café as well 
+    cafe_name.append(address.address) #add the name to the list 
+     
+    print(address) #print all addresses 
  
-# add building footprints in 50% opacity white 
-
+cafe_coords = pd.DataFrame({"name":cafe_name,"lat":cafe_lat,"lon":cafe_long}) #make a new dataframe with the café information 
  
-plt.show() 
+m = folium.Map([cafe_coords.lat.mean(), cafe_coords.lon.mean()], zoom_start=15,tiles="Cartodbdark_matter") #create a map 
+for i in range(cafe_coords.shape[0]): 
+  location = [cafe_coords.lat.iloc[i], cafe_coords.lon.iloc[i],] # add the locations 
+  cafe_name = cafe_coords.name.iloc[i] #add the name at the location points 
+  folium.CircleMarker(location=location, tooltip=cafe_name).add_to(m) #add a nice marker 
+display(m)
 
- 
-# pt = ox.graph_to_gdfs(city1, edges=False).unary_union.centroid 
-# bbox = ox.utils_geo.bbox_from_point(eind, dist=500) 
-# fig, ax = ox.plot_graph(city1,bbox=bbox) 
-# result.nodes.plot(ax=ax, color ="red", markersize = 5000) 
 ```
