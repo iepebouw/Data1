@@ -23,7 +23,13 @@ Add table from grachtenmonitor 2022 page 19
 Question 2: Are there peak times for the canals?
 The canals in the canalbelt are the most intensively used canals, but this also varies during the day. In the figure (add figure grachtenmonitor 2022 page 13) can be seen that from 8AM there is a sharp increase in boats on the canals. At 4 PM passenger shipping peaks, and between 6PM and 7PM there is a peak of leisure boats. From this we can conclude that an event in the afternoon has a bigger impact on shipping than am event held earlier that day. 
 
-Question 3: 
+Question 3: Use canal boats more or less energy in relation to their carbon footprint compared to another activity?
+To calculate whether the use of canal boats has less impact on the environment than another activity, we compared the carbon footprint of a canal boat to the carbon footprint of a hop on hop off bus. 
+
+Question 4:
+
+Question 5: How many support boats and vehicles are needed for the Paralympics event only?
+The amount of support boats depends on the waterbody where the event is helt. An open water body requires and has more room for safety boats and paddlers than a swim through the narrow canals. Is it difficult to find strict rules about how many support boats and paddlers are needed for a big event like the Paralympics. A somewhat similar event might be Amsterdam City Swim
 
 
 
