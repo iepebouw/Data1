@@ -1,6 +1,7 @@
 ---
 title: Home
 layout: home
+nav_order: 1
 ---
 
 Welcome, on this page we share the results of *Group 5*: Eline, Glenn, and Iepe for the four assignments
