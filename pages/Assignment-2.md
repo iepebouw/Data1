@@ -74,7 +74,16 @@ Support boats are not compulsory for open water swimming events, but strongly re
 
 ### If only clean energy can be used, how many solar panels or wind turbines are needed?
 
+To understand how much wind turbines are needed we need to know how much energy 1 wind turbine produces. In total there were 2.606 wind turbines in the Netherlands in 2020. If we look at the current energy production of wind turbines in the netherlands, we can separate the total production between onshore and offshore windturbines. Of the total turbines 2.144 are situated on land and inland waterways. These turbines produce 9,9 billion kWh ([CBS](https://longreads.cbs.nl/nederland-in-cijfers-2022/hoeveel-windmolens-staan-er-in-nederland/). On average this means there is: 
+
+```python
+9900000000000/2144
+```
+4617537313.43kWh produced per wind turbine per year. How many are needed depends on the total amount of wind on the days that the event is held. To fully answer the question this means we also need to know how sunny the days will be for the solar panels and how much energy is used for such an event (which we could not find). To conclude, all of this together means that it is not possible to answer this question so we are allowed to say it is a stupid question.
+
 ### Is it possible to accomodate these facilities within the city?
+
+If we look at the amount of time needed to install a new windturbine in Amsterdam (as was visible in the lecture in Metropolitan Challenges of Saskia Müller this is definitely not possible before the event in 2024. Similar could be assumed for solar panels, the decision process, finding the right place to fit those panels and having citizens protesting/delaying the process would definitely take too long to be feasible before 2024.
 
 ### Would there be any effect on the water quality if there are less/no canal boats using fossil fuels?
 
