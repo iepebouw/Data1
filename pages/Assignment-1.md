@@ -5,7 +5,7 @@ permalink: /assignment-1
 nav_order: 2
 ---
 
-## Amsterdam Paralympics
+# Amsterdam Paralympics
 Paris is hosting the Paralympics in 2024. One of the events at the Paralympics is an open water
 swimming event in the Seine (apparently the water is clean or so the French say). Since the City
 of Amsterdam thinks it is beter than Paris, they want to host an event before the Paralympics,
