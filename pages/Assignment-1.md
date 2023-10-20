@@ -29,7 +29,8 @@ In the table below we listed useful data-sets covering the above mentioned requi
 | (Swim) water quality modelling in the city of Amsterdam | pdf | [https://edepot.wur.nl/528034](https://edepot.wur.nl/528034) | Thesis about water quality in Amsterdam, e.g.information about what influences it |
 | Zwemwater | URL | [https://www.zwemwater.nl/schoon_water_kwaliteit](https://www.zwemwater.nl/schoon_water_kwaliteit) | Data about swim water quality, measurements |
 
-From the figure below we can conclude that the canalbelt is an intensively used waterway for commercial boats and tour boats, especially during the summer the event would have too much of an impact on the waterway. Thus, the event should take place outside of the city center canals. ![image](https://github.com/iepebouw/data1/assets/144791642/aaf274e0-351c-40aa-8ca7-338b1d4b4446)
+From the figure below we can conclude that the canalbelt is an intensively used waterway for commercial boats and tour boats, especially during the summer the event would have too much of an impact on the waterway. Thus, the event should take place outside of the city center canals.  
+![image](https://github.com/iepebouw/data1/assets/144791642/aaf274e0-351c-40aa-8ca7-338b1d4b4446)
 
 
 
