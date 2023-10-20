@@ -13,8 +13,8 @@ Even though the event will take place in 2024, it is still important to limit th
 
 | Name | File type | Source | Comments|
 | :-----------|:-----------|:--------|:-----|
-| Grachtenmonitor 2022 | pdf | https://openresearch.amsterdam/nl/page/92981/grachtenmonitor-2022 | Information about ditribution of vignetten (q1), peak times (q2) |
-|WOWSA Rules & Regulations |URL|https://www.openwaterswimming.com/docs/rules-regulations/wowsa-rules-regulations/ | Rules and regulations regarding open water swimming, e.g. information about position boats |
+| Grachtenmonitor 2022 | pdf | [https://openresearch.amsterdam/nl/page/92981/grachtenmonitor-2022](https://openresearch.amsterdam/nl/page/92981/grachtenmonitor-2022) | Information about ditribution of vignetten (q1), peak times (q2) |
+|WOWSA Rules & Regulations |URL|[https://www.openwaterswimming.com/docs/rules-regulations/wowsa-rules-regulations/](https://www.openwaterswimming.com/docs/rules-regulations/wowsa-rules-regulations/) | Rules and regulations regarding open water swimming, e.g. information about position boats |
 
 
 ### How many of the canal boats currently in use are diesel/fossil fuel driven and how many boats are electrical driven?
