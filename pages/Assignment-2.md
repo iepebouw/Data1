@@ -25,40 +25,39 @@ The canals in the canalbelt are the most intensively used canals, but this also 
 ### Use canal boats more or less energy in relation to their carbon footprint compared to another activity?
 To calculate whether the use of canal boats has less impact on the environment than another activity, we compared the carbon footprint of a canal boat to the carbon footprint of a hop on hop off bus. 
 
-To answer this question we first need to make a definition for the carbon footprint. This definition is used: First, for comparison: a traditional car’s footprint is calculated by multiplying the quantity of fuel used in a year by an “emissions factor,” the pounds of CO2 emitted by combustion of one gallon of that fuel. [Terrapass](https://terrapass.com/blog/driving-calculator-20/#:~:text=First%2C%20for%20comparison%3A%20a%20traditional,one%20gallon%20of%20that%20fuel.)
-
-To make it easier we convert the fuel usage towards kWh and the CO2 emission towards this value as well.
-
-We assume that for the olympic variant electric canal boats are used as this whole excercise is about the environment
-The estimate for carbon emissions of electricity 295 gCO2/kWh [European Environment Agency](https://www.eea.europa.eu/data-and-maps/daviz/co2-emission-intensity-5#tab-googlechartid_chart_11_filters=%7B%22rowFilters%22%3A%7B%7D%3B%22columnFilters%22%3A%7B%22pre_config_ugeo%22%3A%5B%22European%20Union%20(current%20composition)%22%5D%7D%7D)
-
-The estimate of carbon emission for diesel is 2700g C02/liter[Autosmart](https://natural-resources.canada.ca/sites/www.nrcan.gc.ca/files/oee/pdf/transportation/fuel-efficient-technologies/autosmart_factsheet_9_e.pdf)
-
-1 liter of diesel is 0,84kg[CBS](https://www.cbs.nl/en-gb/our-services/methods/definitions/weight-units-energy)
-
-1kg of diesel is 12.7 kWh[Quora](https://www.quora.com/How-can-I-convert-diesel-consumption-to-kWh#:~:text=If%20you%20look%20at%20the,12.7%20kWh%2Fkg%20for%20diesel.)
-
-So the carbon emission of 1kWh of Diesel is:
-
+To answer this question we first need to make a definition for the carbon footprint. This definition is used: 
+1. For comparison: a traditional car’s footprint is calculated by multiplying the quantity of fuel used in a year by an “emissions factor,” the pounds of CO2 emitted by combustion of one gallon of that fuel. ([Terrapass](https://terrapass.com/blog/driving-calculator-20/#:~:text=First%2C%20for%20comparison%3A%20a%20traditional,one%20gallon%20of%20that%20fuel.))
+2. To make it easier we convert the fuel usage towards kWh and the CO2 emission towards this value as well. We assume that for the olympic variant electric canal boats are used as this whole excercise is about the environment
+The estimate for carbon emissions of electricity 295 gCO2/kWh ([European Environment Agency](https://www.eea.europa.eu/data-and-maps/daviz/co2-emission-intensity-5#tab-googlechartid_chart_11_filters=%7B%22rowFilters%22%3A%7B%7D%3B%22columnFilters%22%3A%7B%22pre_config_ugeo%22%3A%5B%22European%20Union%20(current%20composition)%22%5D%7D%7D))
+3. The estimate of carbon emission for diesel is 2700g C02/liter ([Autosmart](https://natural-resources.canada.ca/sites/www.nrcan.gc.ca/files/oee/pdf/transportation/fuel-efficient-technologies/autosmart_factsheet_9_e.pdf)):
+- 1 liter of diesel is 0,84kg ([CBS](https://www.cbs.nl/en-gb/our-services/methods/definitions/weight-units-energy))
+- 1 kg of diesel is 12.7 kWh ([Quora](https://www.quora.com/How-can-I-convert-diesel-consumption-to-kWh#:~:text=If%20you%20look%20at%20the,12.7%20kWh%2Fkg%20for%20diesel.))
+4. So the carbon emission of 1kWh of Diesel is:
 ```python
 ((1/0.84)*2700)/12.7
 ```
-This gives 253.0933633295838gCO2/kWh
+_This gives 253.0933633295838gCO2/kWh_
 
-The average usage of a canal boat is 15.6 kWh[Waternet](https://www.waternet.nl/siteassets/innovatie/electric-shipping-in-the-city-of-amsterdam-tno2.pdf)
-The average usage of a similar English variant of the hop on hop of bus is 1:5,5[Pverbeek](https://www.pverbeek.nl/verkoop/#:~:text=Onze%20Engelse%20dubbeldekker%20bussen%20bijvoorbeeld,een%20moderne%20vrachtwagen%20en%20autobus!)
-
+5. The average usage of a canal boat is 15.6 kWh ([Waternet](https://www.waternet.nl/siteassets/innovatie/electric-shipping-in-the-city-of-amsterdam-tno2.pdf))
+6. The average usage of a similar English variant of the hop on hop of bus is 1:5,5 ([Pverbeek](https://www.pverbeek.nl/verkoop/#:~:text=Onze%20Engelse%20dubbeldekker%20bussen%20bijvoorbeeld,een%20moderne%20vrachtwagen%20en%20autobus!))
 ```python
 print("carbon footprint canal boat in CO2/h:",15.6*295)
 
-print("carbon footprint hop on hop of bus in CO2/h:",((5.5/0.84)*2700)/12.7)
+print("carbon footprint hop on hop of bus in CO2/l:",((5.5/0.84)*2700)/12.7)
 
 ```
-carbon footprint canal boat in CO2/h: 4602.0
+_carbon footprint canal boat in CO2/h: 4602.0_
 
 carbon footprint hop on hop of bus in CO2/h: 1392.013498312711
+7. These are the CO2 emissions of the canal boat an hour AND the CO2 emissions of the bus PER LITER. To calculate how much this is an hour:
+- The map of [Spotzi](https://www.researchgate.net/figure/Map-of-average-traffic-speeds-in-central-Amsterdam-Source-Spotzi_fig5_332660949) shows an average speed on the [routes](https://www.citysightseeingamsterdam.nl/nl/route-stops/) of the bus of around 15-30 Km/H. Assuming the bus stops quite a lot of times probably the average speed is 15km/h
+8. This means that the average usage of the bus is
+```python
+print("carbon footprint hop on hop of bus in CO2/h:", (15.5/5.5)*((5.5/0.84)*2700)/12.7)
+```
+_carbon footprint hop on hop of bus in CO2/h: 3922.947131608549_
 
-From the above made calculations we can conclude that canal boats for tourists use more energy than the touristic hop on hop off buses. 
+9. From the above made calculations we can conclude that canal boats for tourists use more energy than the touristic hop on hop off buses. 
 
 ### Would you consider it economically feasible?
 The result from the calculations above shows how electric vehicles are 
