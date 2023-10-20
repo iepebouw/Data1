@@ -24,15 +24,72 @@ The municiplity of Amsterdam will receive 30.000 (visitors) * 3 (euro) * 6 (nigh
 
 ### Plot the amount of AirBnB locations per neighbourhood.
 
+```python
+import pandas as pd 
+from pandas import DataFrame 
+import matplotlib.pyplot as plt 
+import osmnx as ox 
+from geopy.geocoders import Nominatim 
+import plotly.express as px 
+from plotly.express import histogram  
+airbnb = pd.read_csv("C:/Users/GBomm/OneDrive/Documents/MADE/Q1/Data/WS4/listings.csv") # read Airbnb file
+airbnb.head() # print first five colums
+fig = histogram(airbnb, x="neighbourhood", text_auto=True) 
+fig.update_layout(height=500,title_text='Airbnb count per neighbourhood') 
+fig.show() 
+```
 ### Which street in Amsterdam has the most AirBnB apartments?
+```python
+import itertools 
+airbnb_oudwest = airbnb[airbnb.neighbourhood == "De Baarsjes - Oud-West"] #filter on the neighbourhood with the most airbnbs 
+geolocator = Nominatim(user_agent="AMS") 
+latitude = airbnb_oudwest['latitude'].tolist() #add the airbnbs lat to a list 
+longitude = airbnb_oudwest['longitude'].tolist() #add the airbnbs lon to a list 
+streets = [] #make a new street list 
+for lat, lon in zip(latitude, longitude): #zip makes it possible to use two lists at the same time 
+    coor = str(lat),str(lon) #coordinates of the airbnbs 
+    address = geolocator.reverse(coor, zoom=16) #reverse geocode the coordinates, zoom=16 makes sure you only get the streets 
+    streets.append(address.address) #add the addresses to the streetlist 
+def most_frequent(List): #new function to get the most frequent occuring street 
+    return max(set(List), key = List.count) 
+print(most_frequent(streets)) #print the most frequent occuring street 
+```
 
-### Try to cross reference the data from the AirBnB dataset with the BBGA. Can you figure
-out if all apartments of AirBnB are designated as housing? Which number of
-apartments are not rented out all the time but are also used as normal housing?
+### Try to cross reference the data from the AirBnB dataset with the BBGA. Can you figure out if all apartments of AirBnB are designated as housing? Which number of apartments are not rented out all the time but are also used as normal housing?
 
-### How many hotel rooms should be built if Amsterdam wants to accommodate the same
-number of tourists?
+```python
+bbga = pd.read_excel("C:/Users/GBomm/OneDrive/Documents/MADE/Q1/Data/WS4/2023_BBGA_0614_cf8d825e89.xlsx") # Read the BBGA file 
+bbga_2018 = bbga[bbga.jaar == 2018] #filter on the first year there is a full dataframe
+fig = histogram(bbga_2018, x="gebiednaam", y = "BHVESTAIRBNB", text_auto=True) #create a similar histogram but with BBGA
+fig.update_layout(height=500,title_text='Airbnb count per neighbourhood BBGA') 
+fig.show()# You can compare on the webiste (by saying the amounts are higher than the airbnb listings and by saying that there are more neighbourhoods than the airbnb listings)
+total_amsterdam = bbga_2018._get_value(3926, 'BHVESTAIRBNB') #get the total amount 
+percentage = 100 - (len(airbnb) / total_amsterdam * 100) #divide total availability of the listings list by the total availiability of BBGA*100%
+print(percentage,"% is not always rented out but also used as normal housing") # This is the amount not on the airbnb site but registered as airbnb, this means people also live there 
+```
+### How many hotel rooms should be built if Amsterdam wants to accommodate the same number of tourists?
+
+According to [Airbtics](https://airbtics.com/airbnb-occupancy-rates-by-city/) is on average 37% of all airbnbs occupied, which means we can use 63% of the listings.csv file.
+
+According to [CBS](https://www.cbs.nl/en-gb/figures/detail/82058ENG) 46% of hotel rooms are occupied during the year in the netherlands, so 54% of all hotel rooms are available for visitors.
+  
+```python
+
+#If we assume every Airbnb has two persons renting:
+airbnb_spots = round(2 * len(airbnb) * 0.63) # times two because each room houses 2 people and 63 percent of the airbnbs are available 
+hotel_spots = round(2 * bbga._get_value(2367, 'BHHOTKAM') * 0.54) # 54 percent of the hotel rooms are available 
+visitors = 30000 # number of visitors 
+if (airbnb_spots + hotel_spots) >= visitors: # if the total amount of rooms is more than the visitors, then you don't need to build anymore rooms 
+    print("You don't need to build any hotel rooms") 
+else: 
+    number_rooms = (visitors - (airbnb_spots + hotel_spots)) / 2 #else calculate how many rooms you need to build, divided by two because each room houses 2 people 
+    print("You have to build",number_rooms,"more rooms") 
+```
 
 ### How many different licenses are issued?
+
+```python
+print(len(airbnb["license"].unique())) 
+```
 
 Go to the next assignment: [Transport]({{site.baseurl}}/assignment-4)
