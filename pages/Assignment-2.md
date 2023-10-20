@@ -59,7 +59,7 @@ carbon footprint canal boat in CO2/h: 4602.0
 
 carbon footprint hop on hop of bus in CO2/h: 1392.013498312711
 
-So canal boats use less energy than other activities
+From the above made calculations we can conclude that canal boats for tourists use more energy than the touristic hop on hop off buses. 
 
 Question 4:
 
