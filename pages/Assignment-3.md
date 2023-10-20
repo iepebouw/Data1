@@ -9,12 +9,9 @@ has_children: true
 # Amsterdam Housing
 {: .no_toc }
 
-For this exercise you need the data from this website. Download the Basis Bestand Gebieden
-Amsterdam (BBGA), both the data and the documentation. You already have the AirBnB data
-from Amsterdam from the workshop exercise.
-The Municipality of Amsterdam is in a love hate relationship with AirBnb, see for example this
-and this article. Amsterdam wants to get a bit of insight in the number of tourists that will
-make use of AirBnB. Can you advise on or calculate for Amsterdam:
+There are 30.000 visitors expected during the Paralympics. Only a part of these visitors are tourists, but to make this assignment more clear, we consider all the visitors as people who might need a roof above their heads during the event. For this exercise we used the data from the [Dataset Basis Bestand Gebieden
+Amsterdam (BBGA)](https://onderzoek.amsterdam.nl/dataset/basisbestand-gebieden-amsterdam-bbga) and the data set about [Airbnb's](http://insideairbnb.com/get-the-data/) in Amsterdam. 
+
 
 ## Table of contents
 {: .no_toc .text-delta }
