@@ -123,11 +123,11 @@ Haarlemmerplein: Bus 22 (to Sloterdijk and Muiderpoort), Bus 18 (to Slotervaart 
 Finish – Olympisch Stadion: Bus 62 (to Station Lelylaan and Rivierenbuurt), Tram 24 (to VUmc and Centraal)[52.34396636629443, 4.856894263000401] 
 Olympiaweg: Bus 15 (to Sloterdijk and Station Zuid), Tram 24 (to VUmc and Centraal)[52.345251047340675, 4.858472173464992] 
 Amstelveenseweg: metro 50 (to Gein and Isolatorweg), metro 51 (to Centraal and Isolatorweg)[52.33858597150655, 4.857614965924259] 
-[Source](https://reisinfo.gvb.nl/nl/haltes/07121)
+[GVB](https://reisinfo.gvb.nl/nl/haltes/07121)
  
-A bus in amsterdam has a maximum capacity of 150 passengers [source](https://over.gvb.nl/ov-in-amsterdam/voer-en-vaartuigen/bus-in-cijfers/)
-A tram in amsterdam has a maximum capacity of 151 passengers [source](https://over.gvb.nl/ov-in-amsterdam/voer-en-vaartuigen/tram-in-cijfers/)
-A metro in amsterdam has a maximum capacity of 480 passengers [source](https://over.gvb.nl/content/uploads/2018/11/Factsheet-CAF-GVB-M7-metro-voor-Amsterdam.pdf)
+A bus in amsterdam has a maximum capacity of 150 passengers [GVB](https://over.gvb.nl/ov-in-amsterdam/voer-en-vaartuigen/bus-in-cijfers/)
+A tram in amsterdam has a maximum capacity of 151 passengers [GVB](https://over.gvb.nl/ov-in-amsterdam/voer-en-vaartuigen/tram-in-cijfers/)
+A metro in amsterdam has a maximum capacity of 480 passengers [GVB](https://over.gvb.nl/content/uploads/2018/11/Factsheet-CAF-GVB-M7-metro-voor-Amsterdam.pdf)
  
 Looking at the GVB website schedule we could detact that the metro leaves every 10 minutes (6 times in an hour), the busses and trams at the finish run every 15 minutes (4 times in an hour) and the busses and trams at the start every 10 minutes (6 times in an hour) 
  
