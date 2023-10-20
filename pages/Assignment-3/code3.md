@@ -18,12 +18,9 @@ _make sure the following libraries are installed:_
 - plotly
 - Openpyxl
 
-_Download the following file and past the path before #read Airbnbn file_
+_Go to [Airbnbn](http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2023-09-03/visualisations/listings.csv) and download the listings.csv file and paste the path on the mentioned place (in CAPITALS) in the code_
 
-[listings.csv]()
-
-
-Runtime code: Around 1m 30s
+_go to [BBGA](https://onderzoek.amsterdam.nl/dataset/basisbestand-gebieden-amsterdam-bbga) and download the 'Het BBGA inclusief metadata in xlsx formaat' file. Paste the path on the mentioned place (in CAPITALS) in the code_
 
 ```python
 import pandas as pd 
@@ -33,7 +30,7 @@ import osmnx as ox
 from geopy.geocoders import Nominatim 
 import plotly.express as px 
 from plotly.express import histogram  
-airbnb = pd.read_csv("/Users/iepebouw/Documents/MADE/Data 1/NEW Listings.csv") # read Airbnb file
+airbnb = pd.read_csv("PASTE THE PATH TO THE LISTINGS.CSV FILE") # read Airbnb file
 airbnb.head() # print first five colums
 fig = histogram(airbnb, x="neighbourhood", text_auto=True) 
 fig.update_layout(height=500,title_text='Airbnb count per neighbourhood') 
@@ -57,7 +54,7 @@ print(most_frequent(streets)) #print the most frequent occuring street
 
 #-------------------------------------------------------------------------------------------------
 
-bbga = pd.read_excel("/Users/iepebouw/Documents/MADE/Data 1/2023_BBGA_0614_cf8d825e89.xlsx") # Read the BBGA file 
+bbga = pd.read_excel("PASTE THE PATH TO THE BBGA FILE") # Read the BBGA file 
 bbga_2018 = bbga[bbga.jaar == 2018] #filter on the first year there is a full dataframe
 fig = histogram(bbga_2018, x="gebiednaam", y = "BHVESTAIRBNB", text_auto=True) #create a similar histogram but with BBGA
 fig.update_layout(height=500,title_text='Airbnb count per neighbourhood BBGA') 
