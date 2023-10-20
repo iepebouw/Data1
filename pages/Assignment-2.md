@@ -5,7 +5,7 @@ permalink: /assignment-2
 nav_order: 3
 ---
 
-## Amsterdam TourBoats
+# Amsterdam TourBoats
 {: .no_toc }
 
 ## Table of contents
