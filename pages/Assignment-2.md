@@ -6,7 +6,7 @@ nav_order: 3
 ---
 
 ## Amsterdam TourBoats
-Amsterdam has set progressive goals in order to comply with the Clean Air Policy. The city must be completely emission-free by 2030, and the goal is to have exclusively emission-free pleasure boats within the canal belt by 2025. All boats have a vignette, and from 2025 on only boats with a green vignette (electric or hand-propelled boats) or a yellow vignette (hybrid-boats, only using electric motor when entering the emission-free zones) are allowed to enter the canals of the city center. The through shipping routes are an exception from this, and boats with white () or red () vignettes are still allowed to enter these waterways until the transitional periode of 4 years ends. The IJ ferries that connect Amsterdam North with the rest of Amsterdam also need to be emission-free by 2025. 
+Amsterdam has set progressive goals in order to comply with the [Clean Air Policy](https://www.amsterdam.nl/en/policy/sustainability/clean-air/). The city must be completely emission-free by 2030, and the goal is to have exclusively emission-free pleasure boats within the canal belt by 2025. All boats have a [vignette](https://openresearch.amsterdam/nl/page/92981/grachtenmonitor-2022), and from 2025 on only boats with a green vignette (electric or hand-propelled boats) or a yellow vignette (hybrid-boats, only using electric motor when entering the emission-free zones) are allowed to enter the canals of the city center. The through shipping routes are an exception from this, and boats with white or red vignettes are still allowed to enter these waterways until the transitional periode of 4 years ends. The IJ ferries that connect Amsterdam North with the rest of Amsterdam also need to be emission-free by 2025. 
 
 Even though the event will take place in 2024, it is still important to limit the pollution levels in the swimming water and to have safe water quality. The municipality also wants to create ideal conditions to ensure high performances. In addition, the event must be energy neutral. To make sure that the swimming route of the Paralympics meets this requirements, we need several data sets. Data on the motor of the boats, peak hours on the canals, carbon footprint, wind and solar energy is in the table below.
 
@@ -18,11 +18,16 @@ Even though the event will take place in 2024, it is still important to limit th
 
 
 ### How many of the canal boats currently in use are diesel/fossil fuel driven and how many boats are electrical driven?
-Vignettes are valid for one year, and thus need to be renewed every year. From the tabel below, we can conclude that there are 7350 boats in total in 2022, excluding passage boats. Only 34% of these vignettes is green or yellow, so only 34% of these boats is allowed to enter emission-free zones. Almost 31% of the boats is fully electrical driven. In 2024, a higher amount of green or yellow vignettes can be expected, since it approaches the enddate for the emission-free zones in 2025. Moreover, the municipality is installing more charging points for electric boats, to make the transition go faster.
-Add table from grachtenmonitor 2022 page 19
+Vignettes are valid for one year, and thus need to be renewed every year. From the [tabel](https://openresearch.amsterdam/nl/page/92981/grachtenmonitor-2022) below, we can conclude that there are 7350 boats in total in 2022, excluding passage boats. Only 34% of these vignettes is green or yellow, so only 34% of these boats is allowed to enter emission-free zones. Almost 31% of the boats is fully electrical driven. In 2024, a higher amount of green or yellow vignettes can be expected, since it approaches the enddate for the emission-free zones in 2025. Moreover, the municipality is installing more charging points for electric boats, to make the transition go faster.
+
+![image](https://github.com/iepebouw/data1/assets/144791642/3d7dd227-2d73-4f2a-87a8-96c02e41392f)
+
 
 ### Are there peak times for the canals?
-The canals in the canalbelt are the most intensively used canals, but this also varies during the day. In the figure (add figure grachtenmonitor 2022 page 13) can be seen that from 8AM there is a sharp increase in boats on the canals. At 4 PM passenger shipping peaks, and between 6PM and 7PM there is a peak of leisure boats. From this we can conclude that an event in the afternoon has a bigger impact on shipping than am event held earlier that day. 
+The canals in the canalbelt are the most intensively used canals, but this also varies during the day. In the [figure](https://openresearch.amsterdam/nl/page/92981/grachtenmonitor-2022) below can be seen that from 8AM there is a sharp increase in boats on the canals. At 4 PM passenger shipping peaks, and between 6PM and 7PM there is a peak of leisure boats. From this we can conclude that an event in the afternoon has a bigger impact on shipping than am event held earlier that day. 
+
+![image](https://github.com/iepebouw/data1/assets/144791642/8de54ff7-7763-4244-be4a-199717a80afb)
+
 
 ### Use canal boats more or less energy in relation to their carbon footprint compared to another activity?
 To calculate whether the use of canal boats has less impact on the environment than another activity, we compared the carbon footprint of a canal boat to the carbon footprint of a hop on hop off bus. 
@@ -51,7 +56,7 @@ print("carbon footprint hop on hop of bus in CO2/l:",((5.5/0.84)*2700)/12.7)
 _carbon footprint canal boat in CO2/h: 4602.0_
 
 carbon footprint hop on hop of bus in CO2/h: 1392.013498312711
-7. These are the CO2 emissions of the canal boat per hour AND the CO2 emissions of the bus PER LITER. To calculate how much this is an hour:
+7. These are the CO2 emissions of the canal boat per hour and the CO2 emissions of the bus PER LITER. To calculate how much this is an hour:
 - The map of [Spotzi](https://www.researchgate.net/figure/Map-of-average-traffic-speeds-in-central-Amsterdam-Source-Spotzi_fig5_332660949) shows an average speed on the [routes](https://www.citysightseeingamsterdam.nl/nl/route-stops/) of the bus of around 15-30 Km/H. Assuming the bus stops quite a lot of times probably the average speed is 15km/h.
 8. This means that the average usage of the bus is
 ```python
