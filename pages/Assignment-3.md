@@ -38,6 +38,9 @@ fig = histogram(airbnb, x="neighbourhood", text_auto=True)
 fig.update_layout(height=500,title_text='Airbnb count per neighbourhood') 
 fig.show() 
 ```
+<img width="1073" alt="image" src="https://github.com/iepebouw/data1/assets/145610700/5b57a39a-855b-483e-9ace-dab4759272cf">
+<img width="1074" alt="image" src="https://github.com/iepebouw/data1/assets/145610700/64ba9107-b903-4cb1-a46f-fdcbcd391213">
+
 ### Which street in Amsterdam has the most AirBnB apartments?
 ```python
 import itertools 
@@ -54,6 +57,7 @@ def most_frequent(List): #new function to get the most frequent occuring street
     return max(set(List), key = List.count) 
 print(most_frequent(streets)) #print the most frequent occuring street 
 ```
+The street with the most Airbnbs is: Govert Flinckstraat, De Pijp, Zuid, Amsterdam, Noord-Holland, Nederland, 1072 LC, Nederland and it has 35 Airbnbs 
 
 ### Try to cross reference the data from the AirBnB dataset with the BBGA. Can you figure out if all apartments of AirBnB are designated as housing? Which number of apartments are not rented out all the time but are also used as normal housing?
 
@@ -67,6 +71,8 @@ total_amsterdam = bbga_2018._get_value(3926, 'BHVESTAIRBNB') #get the total amou
 percentage = 100 - (len(airbnb) / total_amsterdam * 100) #divide total availability of the listings list by the total availiability of BBGA*100%
 print(percentage,"% is not always rented out but also used as normal housing") # This is the amount not on the airbnb site but registered as airbnb, this means people also live there 
 ```
+71.01579511284692 % is not always rented out but also used as normal housing
+
 ### How many hotel rooms should be built if Amsterdam wants to accommodate the same number of tourists?
 
 According to [Airbtics](https://airbtics.com/airbnb-occupancy-rates-by-city/) is on average 37% of all airbnbs occupied, which means we can use 63% of the listings.csv file.
@@ -85,6 +91,7 @@ else:
     number_rooms = (visitors - (airbnb_spots + hotel_spots)) / 2 #else calculate how many rooms you need to build, divided by two because each room houses 2 people 
     print("You have to build",number_rooms,"more rooms") 
 ```
+You don't need to build any hotel rooms
 
 ### How many different licenses are issued?
 
