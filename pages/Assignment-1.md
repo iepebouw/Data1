@@ -29,7 +29,10 @@ In the table below we listed useful data-sets covering the above mentioned requi
 | (Swim) water quality modelling in the city of Amsterdam | pdf | https://edepot.wur.nl/528034 | Thesis about water quality in Amsterdam, e.g.information about what influences it |
 | Zwemwater | URL | https://www.zwemwater.nl/schoon_water_kwaliteit | Data about swim water quality, measurements |
 
-From the data above we can conclude that the canalbelt is an intensively used waterway for commercial boats and tour boats, especially during the summer the event would have too much of an impact on the waterway. Thus, the event should take place outside of the city center canals. Moreover, from the data-sets above can be derived that there is are no official open water swimming locations. Official swimming locations are monitored regularly (although once a month does not seem enough to us), so it becomes clear which water is safe to swim in. Before the event the water should be more frequently monitored. 
+From the data above we can conclude that the canalbelt is an intensively used waterway for commercial boats and tour boats, especially during the summer the event would have too much of an impact on the waterway. Thus, the event should take place outside of the city center canals. Moreover, from the data-sets above can be derived that there is are no official open water swimming locations. Official swimming locations are monitored regularly (although once a month does not seem enough to us), so it becomes clear which water is safe to swim in. Before the event the water should be more frequently monitored and the canals need to be cleared from obstacles in the water, like bikes and other bulky objects. Escherichia Coli (E. Coli) and Enterococci are harmful bacteria that could cause sickness when it is present in large quantities. As can be seen from the map below, currently there are no measurements done on these bacteria in the center of Amsterdam. In order to choose a suitable location for the Paralympics, sufficient data about harmful bacteria like E. Coli is needed.
+
+![image](https://github.com/iepebouw/data1/assets/144791642/0b80ea40-5a17-4aa9-9b05-0350db63be6b)
+
 
 
 
