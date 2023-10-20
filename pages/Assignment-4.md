@@ -7,6 +7,20 @@ has_children: true
 ---
 
 ## Amsterdam Transport
+{: .no_toc }
+For this exercise you have chosen a route in Amsterdam for the canal swimming event.
+Preferably you have this route calculated using Python. You can set a start point and an end
+point and then try to find a route that has a certain distance (min. 5 km.)
+The Municipality wants you to find a location for the Event Headquarters. They decided it
+would be best if this E.H. is as close to the centre of the swimming route. There is a bit of a
+concern for the after party and the stream of visitors. They want you to quantify the number of
+visitors that can reach the event and the capacity for festivities after the event.
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
 
 #### Preparation
 
@@ -73,6 +87,65 @@ print(sum(lat)/len(lat))
 # DO the same for the longtitudes
 print(sum(long)/len(long))
 ```
+
+### Use the centre to find a suitable spot for the Event Headquarters.
+
+The centre is close to the Hallen, which is a huge complex which can facilitate the HQ for the time being. It has good accessibility and parking, and with collaboration of the other enterprises in de Hallen it could also mean a local boost for the local shops during the event. 
+
+### Find the closest bus and tram stops at the start and finish of the swimming route. How many people can be transported within an hour?
+
+```python
+import overpy 
+walking_radius = 500 #We decided on a 500 meter radius 
+ 
+# getting information about public transport stops 
+query = f""" 
+    [out:json]; 
+    ( 
+        node["public_transport"="stop_position"] 
+            (around:{walking_radius},{start[0]},{start[1]}); 
+        node["public_transport"="stop_position"] 
+            (around:{walking_radius},{eind[0]},{eind[1]}); 
+    ); 
+    out center; 
+""" 
+api = overpy.Overpass() 
+result = api.query(query) 
+ 
+# printing the results in a list 
+for node in result.nodes: 
+    print(f'Node: {node.tags.get("name", "Unknown")}, Location: ({node.lat}, {node.lon})') 
+print(len(result.nodes)) 
+```
+Bushaltes zijn handmatig verkregen door te kijken naar de website van de GVB en Google Maps: 
+Start - Nassauplein: Bus 22 (to Sloterdijk and Muiderpoort) [52.38538340407277, 4.881430461066379] 
+Haarlemmerplein: Bus 22 (to Sloterdijk and Muiderpoort), Bus 18 (to Slotervaart and Centraal), Bus 21 (to Geuzenveld and Centraal), Tram 5 (to Amstelveen Stadshart and Zoutkeetsgracht) [52.38496779311146, 4.883595326000165] 
+Finish – Olympisch Stadion: Bus 62 (to Station Lelylaan and Rivierenbuurt), Tram 24 (to VUmc and Centraal)[52.34396636629443, 4.856894263000401] 
+Olympiaweg: Bus 15 (to Sloterdijk and Station Zuid), Tram 24 (to VUmc and Centraal)[52.345251047340675, 4.858472173464992] 
+Amstelveenseweg: metro 50 (to Gein and Isolatorweg), metro 51 (to Centraal and Isolatorweg)[52.33858597150655, 4.857614965924259] 
+[Source](https://reisinfo.gvb.nl/nl/haltes/07121)
+ 
+A bus in amsterdam has a maximum capacity of 150 passengers [source](https://over.gvb.nl/ov-in-amsterdam/voer-en-vaartuigen/bus-in-cijfers/)
+A tram in amsterdam has a maximum capacity of 151 passengers [source](https://over.gvb.nl/ov-in-amsterdam/voer-en-vaartuigen/tram-in-cijfers/)
+A metro in amsterdam has a maximum capacity of 480 passengers [source](https://over.gvb.nl/content/uploads/2018/11/Factsheet-CAF-GVB-M7-metro-voor-Amsterdam.pdf)
+ 
+Looking at the GVB website schedule we could detact that the metro leaves every 10 minutes (6 times in an hour), the busses and trams at the finish run every 15 minutes (4 times in an hour) and the busses and trams at the start every 10 minutes (6 times in an hour) 
+ 
+So a little math gives us the following answer: 
+For Nassauplein: 2 (to Sloterdijk AND to Muiderpoort) * 150 (capacity) * 6 (frequency) = 1800 passengers / hour 
+For Haarlemmerplein: (6 * 150 * 6) + (2 * 151 *6) = 7212 passengers / hour 
+For Olympisch Stadion: (2 *150 * 4) + (2 * 151 * 4) = 2408 passengers / hour 
+For Olympiaweg: (2 *150 * 4) + (2 * 151 * 4) = 2408 passengers / hour 
+For Amstelveenseweg: 4 *480 * 6 = 11520 passengers / hour 
+Off course all calculated with python.
+
+#### In summary: 
+The Start can transport 9012 passengers / hour 
+The Finish can transport 16336 passengers / hour 
+
+### Can you find which bus and tram lines these are, and can you find their routes?
+See answer on previous question
+
 
 #### Calculate the centrality of the start, finish, and centre node of the route. Which centrality calculation makes the most sense. 
 For this excercise we want to know the centrality of the three nodes. How accessible start is to finish, and how accessible the centre is from/to the start and finish. Therefore the closeness centrality calculation is the best suitable option for this calculation.
