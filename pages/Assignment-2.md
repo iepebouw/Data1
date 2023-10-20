@@ -25,18 +25,18 @@ The canals in the canalbelt are the most intensively used canals, but this also 
 ### Use canal boats more or less energy in relation to their carbon footprint compared to another activity?
 To calculate whether the use of canal boats has less impact on the environment than another activity, we compared the carbon footprint of a canal boat to the carbon footprint of a hop on hop off bus. 
 
-To answer this question we first need to make a definition for the carbon footprint. This definition is used: [First, for comparison: a traditional car’s footprint is calculated by multiplying the quantity of fuel used in a year by an “emissions factor,” the pounds of CO2 emitted by combustion of one gallon of that fuel. ](https://terrapass.com/blog/driving-calculator-20/#:~:text=First%2C%20for%20comparison%3A%20a%20traditional,one%20gallon%20of%20that%20fuel.)
+To answer this question we first need to make a definition for the carbon footprint. This definition is used: First, for comparison: a traditional car’s footprint is calculated by multiplying the quantity of fuel used in a year by an “emissions factor,” the pounds of CO2 emitted by combustion of one gallon of that fuel. [Terrapass](https://terrapass.com/blog/driving-calculator-20/#:~:text=First%2C%20for%20comparison%3A%20a%20traditional,one%20gallon%20of%20that%20fuel.)
 
 To make it easier we convert the fuel usage towards kWh and the CO2 emission towards this value as well.
 
 We assume that for the olympic variant electric canal boats are used as this whole excercise is about the environment
-[The estimate for carbon emissions of electricity 295 gCO2/kWh]([https://www.sciencedirect.com/science/article/pii/S0306261921012149#:~:text=The%20estimates%20of%20the%20carbon,kWh%20electricity%20are%20related%20to](https://www.eea.europa.eu/data-and-maps/daviz/co2-emission-intensity-5#tab-googlechartid_chart_11_filters=%7B%22rowFilters%22%3A%7B%7D%3B%22columnFilters%22%3A%7B%22pre_config_ugeo%22%3A%5B%22European%20Union%20(current%20composition)%22%5D%7D%7D))
+The estimate for carbon emissions of electricity 295 gCO2/kWh [European Environment Agency](https://www.eea.europa.eu/data-and-maps/daviz/co2-emission-intensity-5#tab-googlechartid_chart_11_filters=%7B%22rowFilters%22%3A%7B%7D%3B%22columnFilters%22%3A%7B%22pre_config_ugeo%22%3A%5B%22European%20Union%20(current%20composition)%22%5D%7D%7D)
 
-[the estimate of carbon emission for diesel is 2700g C02/liter](https://natural-resources.canada.ca/sites/www.nrcan.gc.ca/files/oee/pdf/transportation/fuel-efficient-technologies/autosmart_factsheet_9_e.pdf)
+The estimate of carbon emission for diesel is 2700g C02/liter[Autosmart](https://natural-resources.canada.ca/sites/www.nrcan.gc.ca/files/oee/pdf/transportation/fuel-efficient-technologies/autosmart_factsheet_9_e.pdf)
 
-[1 liter of diesel is 0,84kg](https://www.cbs.nl/en-gb/our-services/methods/definitions/weight-units-energy)
+1 liter of diesel is 0,84kg[CBS](https://www.cbs.nl/en-gb/our-services/methods/definitions/weight-units-energy)
 
-[1kg of diesel is 12.7 kWh](https://www.quora.com/How-can-I-convert-diesel-consumption-to-kWh#:~:text=If%20you%20look%20at%20the,12.7%20kWh%2Fkg%20for%20diesel.)
+1kg of diesel is 12.7 kWh[Quora](https://www.quora.com/How-can-I-convert-diesel-consumption-to-kWh#:~:text=If%20you%20look%20at%20the,12.7%20kWh%2Fkg%20for%20diesel.)
 
 So the carbon emission of 1kWh of Diesel is:
 
@@ -45,8 +45,8 @@ So the carbon emission of 1kWh of Diesel is:
 ```
 This gives 253.0933633295838gCO2/kWh
 
-[The average usage of a canal boat is 15.6 kWh](https://www.waternet.nl/siteassets/innovatie/electric-shipping-in-the-city-of-amsterdam-tno2.pdf)
-[The average usage of a similar English variant of the hop on hop of bus is 1:5,5](https://www.pverbeek.nl/verkoop/#:~:text=Onze%20Engelse%20dubbeldekker%20bussen%20bijvoorbeeld,een%20moderne%20vrachtwagen%20en%20autobus!)
+The average usage of a canal boat is 15.6 kWh[Waternet](https://www.waternet.nl/siteassets/innovatie/electric-shipping-in-the-city-of-amsterdam-tno2.pdf)
+The average usage of a similar English variant of the hop on hop of bus is 1:5,5[Pverbeek](https://www.pverbeek.nl/verkoop/#:~:text=Onze%20Engelse%20dubbeldekker%20bussen%20bijvoorbeeld,een%20moderne%20vrachtwagen%20en%20autobus!)
 
 ```python
 print("carbon footprint canal boat in CO2/h:",15.6*295)
