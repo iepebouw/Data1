@@ -22,8 +22,8 @@ make use of AirBnB. Can you advise on or calculate for Amsterdam:
 1. TOC
 {:toc}
 
-### What Amsterdam will receive from tourist tax if the event lasts a week and you will
-have 30.000 visitors?
+### What Amsterdam will receive from tourist tax if the event lasts a week and you will have 30.000 visitors?
+The municiplity of Amsterdam will receive 30.000 (visitors) * 3 (euro) * 6 (nights) = 540.000 euro
 
 ### Plot the amount of AirBnB locations per neighbourhood.
 
