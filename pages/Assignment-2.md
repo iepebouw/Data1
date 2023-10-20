@@ -63,8 +63,10 @@ From the above made calculations we can conclude that canal boats for tourists u
 ### Would you consider it economically feasible?
 The result from the calculations above shows how electric vehicles are 
 
-Question 5: How many support boats and vehicles are needed for the Paralympics event only?
-The amount of support boats depends on the waterbody where the event is helt. An open water body requires and has more room for safety boats and paddlers than a swim through the narrow canals. Is it difficult to find strict rules about how many support boats and paddlers are needed for a big event like the Paralympics. A somewhat similar event might be Amsterdam City Swim
+### How many support boats and vehicles are needed for the Paralympics event only?
+Support boats are not compulsory for open water swimming events, but strongly recommended. The amount of support boats and paddlers depends on the waterbody where the event is being helt. An open water body requires and has more room for safety boats and paddlers than a swimming route through the narrow canals. Is it difficult to find guidelines about how many support boats and paddlers are recommended for a big event like the Paralympics. A somewhat similar event might be [Amsterdam City Swim](https://www.amsterdamcityswim.nl/informatie/waterveiligheid), where lifeguards in the water and supervisors on the quay were present. In addition to this, every 500 meters there is a first aid post and rest point. To guard safety on the swimming route of the Paralympics, there are 10 of these first aid posts and resting points needed. The amount of lifeguards can only be determined when the number of participants is known. 
+
+
 
 
 
