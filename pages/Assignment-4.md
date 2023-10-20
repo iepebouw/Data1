@@ -8,13 +8,9 @@ has_children: true
 
 ## Amsterdam Transport
 {: .no_toc }
-For this exercise you have chosen a route in Amsterdam for the canal swimming event.
-Preferably you have this route calculated using Python. You can set a start point and an end
-point and then try to find a route that has a certain distance (min. 5 km.)
-The Municipality wants you to find a location for the Event Headquarters. They decided it
-would be best if this E.H. is as close to the centre of the swimming route. There is a bit of a
-concern for the after party and the stream of visitors. They want you to quantify the number of
-visitors that can reach the event and the capacity for festivities after the event.
+
+If the Paralympics become as big as we hope, we need a nice location for the Event Headquarters. Preferably, the Event Headquarters is close to the center of the swimming route, in a easily accessible location, with enough space for the stream of visitors and that could host a potential after party. 
+
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -90,7 +86,7 @@ print(sum(long)/len(long))
 
 ### Use the centre to find a suitable spot for the Event Headquarters.
 
-The centre is close to the Hallen, which is a huge complex which can facilitate the HQ for the time being. It has good accessibility and parking, and with collaboration of the other enterprises in de Hallen it could also mean a local boost for the local shops during the event. 
+The centre is close to the Hallen, which is a huge complex which can facilitate the EH for the time being. It has good accessibility and parking, and with collaboration of the other enterprises in de Hallen it could also mean a local boost for the local shops during the event. 
 
 ### Find the closest bus and tram stops at the start and finish of the swimming route. How many people can be transported within an hour?
 
@@ -125,9 +121,9 @@ Olympiaweg: Bus 15 (to Sloterdijk and Station Zuid), Tram 24 (to VUmc and Centra
 Amstelveenseweg: metro 50 (to Gein and Isolatorweg), metro 51 (to Centraal and Isolatorweg)[52.33858597150655, 4.857614965924259] 
 [GVB](https://reisinfo.gvb.nl/nl/haltes/07121)
  
-A bus in amsterdam has a maximum capacity of 150 passengers [GVB](https://over.gvb.nl/ov-in-amsterdam/voer-en-vaartuigen/bus-in-cijfers/)
-A tram in amsterdam has a maximum capacity of 151 passengers [GVB](https://over.gvb.nl/ov-in-amsterdam/voer-en-vaartuigen/tram-in-cijfers/)
-A metro in amsterdam has a maximum capacity of 480 passengers [GVB](https://over.gvb.nl/content/uploads/2018/11/Factsheet-CAF-GVB-M7-metro-voor-Amsterdam.pdf)
+A bus in Amsterdam has a maximum capacity of 150 passengers [GVB](https://over.gvb.nl/ov-in-amsterdam/voer-en-vaartuigen/bus-in-cijfers/)
+A tram in Amsterdam has a maximum capacity of 151 passengers [GVB](https://over.gvb.nl/ov-in-amsterdam/voer-en-vaartuigen/tram-in-cijfers/)
+A metro in Amsterdam has a maximum capacity of 480 passengers [GVB](https://over.gvb.nl/content/uploads/2018/11/Factsheet-CAF-GVB-M7-metro-voor-Amsterdam.pdf)
  
 Looking at the GVB website schedule we could detact that the metro leaves every 10 minutes (6 times in an hour), the busses and trams at the finish run every 15 minutes (4 times in an hour) and the busses and trams at the start every 10 minutes (6 times in an hour) 
  
