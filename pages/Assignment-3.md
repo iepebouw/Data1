@@ -55,7 +55,7 @@ for lat, lon in zip(latitude, longitude): #zip makes it possible to use two list
     streets.append(address.address) #add the addresses to the streetlist 
 def most_frequent(List): #new function to get the most frequent occuring street 
     return max(set(List), key = List.count) 
-print(most_frequent(streets)) #print the most frequent occuring street 
+print("The street with the most Airbnbs is:",most_frequent(streets),"and it has",streets.count(most_frequent(streets)),"Airbnbs") 
 ```
 The street with the most Airbnbs is: Govert Flinckstraat, De Pijp, Zuid, Amsterdam, Noord-Holland, Nederland, 1072 LC, Nederland and it has 35 Airbnbs 
 
