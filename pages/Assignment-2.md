@@ -21,7 +21,9 @@ Vignettes are valid for one year, and thus need to be renewed every year. From t
 Add table from grachtenmonitor 2022 page 19
 
 Question 2: Are there peak times for the canals?
-The canals in the canalbelt are the most intensively used canals, but this also varies during the day. In the figure (add figure grachtenmonitor 2022 page 13), can be seen 
+The canals in the canalbelt are the most intensively used canals, but this also varies during the day. In the figure (add figure grachtenmonitor 2022 page 13) can be seen that from 8AM there is a sharp increase in boats on the canals. At 4 PM passenger shipping peaks, and between 6PM and 7PM there is a peak of leisure boats. From this we can conclude that an event in the afternoon has a bigger impact on shipping than am event held earlier that day. 
+
+Question 3: 
 
 
 
