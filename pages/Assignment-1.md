@@ -26,7 +26,7 @@ In the table below we listed useful data-sets covering the above mentioned requi
 | Op- en afstapplaatsen en ligplaatsen passagiersvoertuigen | CSV | https://maps.amsterdam.nl/varen/ | Map that shows that the canalbelt is intensively used by boats|
 | Grachtenmonitor 2022 | pdf/url | https://openresearch.amsterdam/nl/page/92981/grachtenmonitor-2022 | Document that contains information about how intensely a waterway is used |
 | Water in Amsterdam - Meetresultaten kwaliteitsonderzoek oppervlaktewater 2019 | XLSX | https://data.amsterdam.nl/datasets/lAqjIsj-_a7psg/water-in-amsterdam/?term=Water+in+Amsterdam | Data sheet with data about water quality |
-| (Swim) water quality modelling in the city of Amsterdam | pdf | 8034https://edepot.wur.nl/52 | Thesis about water quality in Amsterdam, e.g.information about what influences it |
+| (Swim) water quality modelling in the city of Amsterdam | pdf | https://edepot.wur.nl/528034 | Thesis about water quality in Amsterdam, e.g.information about what influences it |
 | Zwemwater | URL | https://www.zwemwater.nl/schoon_water_kwaliteit | Data about swim water quality, measurements |
 
 From the data above we can conclude that the canalbelt is an intensively used waterway for commercial boats and tour boats, especially during the summer the event would have too much of an impact on the waterway. Thus, the event should take place outside of the city center canals. Moreover, from the data-sets above can be derived that there is are no official open water swimming locations. Official swimming locations are monitored regularly (although once a month does not seem enough to us), so it becomes clear which water is safe to swim in. Before the event the water should be more frequently monitored. 
