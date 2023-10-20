@@ -22,7 +22,7 @@ visitors that can reach the event and the capacity for festivities after the eve
 1. TOC
 {:toc}
 
-#### Preparation
+### Preparation
 
 To prepare the data for this assignment we used the folowing steps:
 
@@ -69,7 +69,7 @@ bbox = ox.utils_geo.bbox_from_point(start, dist=5000)
 fig, ax = ox.plot_graph_route(city,race,bbox=bbox)
 ```
 
-#### Find the centre of the nodes of the swimming route.
+### Find the centre of the nodes of the swimming route.
 
 ```python
 #Create two emptie lists, one for the latitude and one for the longtitude:
@@ -147,7 +147,7 @@ The Finish can transport 16336 passengers / hour
 See answer on previous question
 
 
-#### Calculate the centrality of the start, finish, and centre node of the route. Which centrality calculation makes the most sense. [See this link.](https://networkx.org/documentation/stable/reference/algorithms/centrality.html)
+### Calculate the centrality of the start, finish, and centre node of the route. Which centrality calculation makes the most sense. [See this link.](https://networkx.org/documentation/stable/reference/algorithms/centrality.html)
 For this excercise we want to know the centrality of the three nodes. How accessible start is to finish, and how accessible the centre is from/to the start and finish. Therefore the closeness centrality calculation is the best suitable option for this calculation.
 
 ```python
