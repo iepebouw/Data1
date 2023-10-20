@@ -24,4 +24,4 @@ _In this assignment we looked at the housing of tourists for the swimming event 
 [**Assignment 4: Amsterdam Transport**]({{site.baseurl}}/assignment-4)
 _In this excercise we looked at possible transportation for the swimming event in Amsterdam_
 
-{: .warning } For all the external links use ctrl+click to open them in a different tab!
+WARNING For all the external links use ctrl+click to open them in a different tab!
