@@ -22,14 +22,14 @@ In the table below we listed useful data-sets covering the above mentioned requi
 | Name                                   | Data type  | Source | Comments             |
 |:-------------------------------------------------|:---------------|:----------------|:-------------------------------|
 | Maps Data Amsterdam| CSV | [https://maps.amsterdam.nl/open_geodata/](https://maps.amsterdam.nl/open_geodata/) |Website with maps needed |
-| Zwem- en speelwater | CSV | https://maps.amsterdam.nl/zwemwater/ | Map that shows how canals are not an official swim location |
-| Op- en afstapplaatsen en ligplaatsen passagiersvoertuigen | CSV | https://maps.amsterdam.nl/varen/ | Map that shows that the canalbelt is intensively used by boats|
-| Grachtenmonitor 2022 | pdf/URL | https://openresearch.amsterdam/nl/page/92981/grachtenmonitor-2022 | Document that contains information about how intensely a waterway is used |
-| Water in Amsterdam - Meetresultaten kwaliteitsonderzoek oppervlaktewater 2019 | XLSX | https://api.data.amsterdam.nl/dcatd/datasets/lAqjIsj-_a7psg/purls/4 | Data sheet with data about water quality |
-| (Swim) water quality modelling in the city of Amsterdam | pdf | https://edepot.wur.nl/528034 | Thesis about water quality in Amsterdam, e.g.information about what influences it |
-| Zwemwater | URL | https://www.zwemwater.nl/schoon_water_kwaliteit | Data about swim water quality, measurements |
+| Zwem- en speelwater | CSV | [https://maps.amsterdam.nl/zwemwater/](https://maps.amsterdam.nl/zwemwater/) | Map that shows how canals are not an official swim location |
+| Op- en afstapplaatsen en ligplaatsen passagiersvoertuigen | CSV | [https://maps.amsterdam.nl/varen/](https://maps.amsterdam.nl/varen/) | Map that shows that the canalbelt is intensively used by boats|
+| Grachtenmonitor 2022 | pdf/URL | [https://openresearch.amsterdam/nl/page/92981/grachtenmonitor-2022](https://openresearch.amsterdam/nl/page/92981/grachtenmonitor-2022) | Document that contains information about how intensely a waterway is used |
+| Water in Amsterdam - Meetresultaten kwaliteitsonderzoek oppervlaktewater 2019 | XLSX | [https://api.data.amsterdam.nl/dcatd/datasets/lAqjIsj-_a7psg/purls/4](https://api.data.amsterdam.nl/dcatd/datasets/lAqjIsj-_a7psg/purls/4) | Data sheet with data about water quality |
+| (Swim) water quality modelling in the city of Amsterdam | pdf | [https://edepot.wur.nl/528034](https://edepot.wur.nl/528034) | Thesis about water quality in Amsterdam, e.g.information about what influences it |
+| Zwemwater | URL | [https://www.zwemwater.nl/schoon_water_kwaliteit](https://www.zwemwater.nl/schoon_water_kwaliteit) | Data about swim water quality, measurements |
 
-From the figure below (grachtenmonitor, 2022) we can conclude that the canalbelt is an intensively used waterway for commercial boats and tour boats, especially during the summer the event would have too much of an impact on the waterway. Thus, the event should take place outside of the city center canals. ![image](https://github.com/iepebouw/data1/assets/144791642/aaf274e0-351c-40aa-8ca7-338b1d4b4446)
+From the figure below we can conclude that the canalbelt is an intensively used waterway for commercial boats and tour boats, especially during the summer the event would have too much of an impact on the waterway. Thus, the event should take place outside of the city center canals. ![image](https://github.com/iepebouw/data1/assets/144791642/aaf274e0-351c-40aa-8ca7-338b1d4b4446)
 
 
 Moreover, from the data-sets above can be derived that there is are no official open water swimming locations. Official swimming locations are monitored regularly (although once a month does not seem enough to us), so it becomes clear which water is safe to swim in. Before the event the water should be more frequently monitored and the canals need to be cleared from obstacles in the water, like bikes and other bulky objects. Escherichia Coli (E. Coli) and Enterococci are harmful bacteria that could cause sickness when it is present in large quantities. As can be seen from the map below, currently there are no measurements done on these bacteria in the center of Amsterdam. In order to choose a suitable location for the Paralympics, sufficient data about harmful bacteria like E. Coli is needed.
