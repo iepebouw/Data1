@@ -21,7 +21,7 @@ In the table below we listed useful data-sets covering the above mentioned requi
 
 | Name                                   | Data type  | Source | Comments             |
 |:-------------------------------------------------|:---------------|:----------------|:-------------------------------|
-| Maps Data Amsterdam| CSV | (https://maps.amsterdam.nl/open_geodata/) |Website with maps needed |
+| [Maps Data Amsterdam](https://maps.amsterdam.nl/open_geodata/)| CSV | (https://maps.amsterdam.nl/open_geodata/) |Website with maps needed |
 | Zwem- en speelwater | CSV | https://maps.amsterdam.nl/zwemwater/ | Map that shows how canals are not an official swim location |
 | Op- en afstapplaatsen en ligplaatsen passagiersvoertuigen | CSV | https://maps.amsterdam.nl/varen/ | Map that shows that the canalbelt is intensively used by boats|
 | Grachtenmonitor 2022 | pdf/URL | https://openresearch.amsterdam/nl/page/92981/grachtenmonitor-2022 | Document that contains information about how intensely a waterway is used |
