@@ -96,7 +96,8 @@ You don't need to build any hotel rooms
 ### How many different licenses are issued?
 
 ```python
-print(len(airbnb["license"].unique())) 
+print("There are",len(airbnb["license"].unique()),"different licences") 
 ```
+There are 7289 different licences 
 
 Go to the next assignment: [Transport]({{site.baseurl}}/assignment-4)
