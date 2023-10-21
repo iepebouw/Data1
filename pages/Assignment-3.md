@@ -32,7 +32,7 @@ import osmnx as ox
 from geopy.geocoders import Nominatim 
 import plotly.express as px 
 from plotly.express import histogram  
-airbnb = pd.read_csv("C:/Users/GBomm/OneDrive/Documents/MADE/Q1/Data/WS4/listings.csv") # read Airbnb file
+airbnb = pd.read_csv(""PASTE THE PATH TO THE listings.csv FILE"") # read Airbnb file
 airbnb.head() # print first five colums
 fig = histogram(airbnb, x="neighbourhood", text_auto=True) 
 fig.update_layout(height=500,title_text='Airbnb count per neighbourhood') 
@@ -62,7 +62,7 @@ The street with the most Airbnbs is: Govert Flinckstraat, De Pijp, Zuid, Amsterd
 ### Try to cross reference the data from the AirBnB dataset with the BBGA. Can you figure out if all apartments of AirBnB are designated as housing? Which number of apartments are not rented out all the time but are also used as normal housing?
 
 ```python
-bbga = pd.read_excel("C:/Users/GBomm/OneDrive/Documents/MADE/Q1/Data/WS4/2023_BBGA_0614_cf8d825e89.xlsx") # Read the BBGA file 
+bbga = pd.read_excel(""PASTE THE PATH TO THE BBGA FILE"") # Read the BBGA file 
 bbga_2018 = bbga[bbga.jaar == 2018] #filter on the first year there is a full dataframe
 fig = histogram(bbga_2018, x="gebiednaam", y = "BHVESTAIRBNB", text_auto=True) #create a similar histogram but with BBGA
 fig.update_layout(height=500,title_text='Airbnb count per neighbourhood BBGA') 
