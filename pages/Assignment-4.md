@@ -87,7 +87,10 @@ print(sum(long)/len(long))
 
 ### Use the centre to find a suitable spot for the Event Headquarters.
 
-The centre is close to the Hallen, which is a huge complex which can facilitate the EH for the time being. It has good accessibility and parking, and with collaboration of the other enterprises in de Hallen it could also mean a local boost for the local shops during the event. 
+The centre is close to the [Hallen](https://www.iamsterdam.com/uit/agenda/nachtleven/clubbing/de-hallen-amsterdam), which is a huge complex which can facilitate the EH for the time being. It has good accessibility and parking, and with collaboration of the other enterprises in de Hallen it could also mean a local boost for the local shops during the event. 
+
+![image](https://github.com/iepebouw/data1/assets/144791642/3f5b4e56-3d4c-47a6-8bcb-d34e90ee1dc2)
+
 
 ### Find the closest bus and tram stops at the start and finish of the swimming route. How many people can be transported within an hour?
 
