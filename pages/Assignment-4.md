@@ -147,7 +147,8 @@ for i in range(stops_coords.shape[0]):
 display(m) 
 ```
 
- 
+ <img width="640" alt="image" src="https://github.com/iepebouw/data1/assets/145610700/89ac4607-c3bc-40ba-8ff2-4c3f1393a087">
+
 A bus in Amsterdam has a maximum capacity of 150 passengers [GVB](https://over.gvb.nl/ov-in-amsterdam/voer-en-vaartuigen/bus-in-cijfers/)
 A tram in Amsterdam has a maximum capacity of 151 passengers [GVB](https://over.gvb.nl/ov-in-amsterdam/voer-en-vaartuigen/tram-in-cijfers/)
 A metro in Amsterdam has a maximum capacity of 480 passengers [GVB](https://over.gvb.nl/content/uploads/2018/11/Factsheet-CAF-GVB-M7-metro-voor-Amsterdam.pdf)
@@ -179,14 +180,17 @@ tram24 = passengers_an_hour(24,tram,4)
 print("The total amount of passengers that can be transported an hour is",(bus22[0]+bus18[0]+tram5[0]),"at the start") 
 print("The total amount of passengers that can be transported an hour is",(bus62[0]+tram24[0]+bus15[0]+tram24[0]),"at the finish")
 
-The amount of people that can be transported with line 22 is 900 
-The amount of people that can be transported with line 18 is 900 
-The amount of people that can be transported with line 5 is 906 
-The amount of people that can be transported with line 62 is 600 
-The amount of people that can be transported with line 24 is 604 
-The amount of people that can be transported with line 15 is 600 
-The amount of people that can be transported with line 24 is 604  
 ```
+The amount of people that can be transported with line 22 is 900
+The amount of people that can be transported with line 18 is 900
+The amount of people that can be transported with line 5 is 906
+The amount of people that can be transported with line 62 is 600
+The amount of people that can be transported with line 24 is 604
+The amount of people that can be transported with line 15 is 600
+The amount of people that can be transported with line 24 is 604
+The total amount of passengers that can be transported an hour is 2706 at the start
+The total amount of passengers that can be transported an hour is 2408 at the finish
+
 
 #### In summary: 
 The total amount of passengers that can be transported an hour is 2706 at the start
@@ -220,6 +224,9 @@ print(start_node,eind_node,centr_node)
 punten = [start_node,eind_node,centr_node] 
 print("The degree centrality for the three nodes is:",nx.group_closeness_centrality(city1,punten))
 ```
+1C, Wenslauerstraat, Kinkerbuurt, Oud-West, West, Amsterdam, Noord-Holland, Nederland, 1053 AV, Nederland
+46447625 298097398 46367797
+The degree centrality for the three nodes is: 0.02004401535297431
 
 ### Find all cafes, restaurants near the finish line. Walking time smaller than 10 minutes
 ```python
