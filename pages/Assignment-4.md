@@ -96,48 +96,60 @@ The centre is close to the [Hallen](https://www.iamsterdam.com/uit/agenda/nachtl
 
 ```python
 import overpy 
-walking_radius = 500 #We decided on a 500 meter radius 
- 
+walking_radius = 300 #We decided on a 300 meter radius 
 # getting information about public transport stops 
 query = f""" 
     [out:json]; 
     ( 
+
         node["public_transport"="stop_position"] 
+
             (around:{walking_radius},{start[0]},{start[1]}); 
+
         node["public_transport"="stop_position"] 
+
             (around:{walking_radius},{eind[0]},{eind[1]}); 
+
     ); 
+
     out center; 
 """ 
 api = overpy.Overpass() 
 result = api.query(query) 
- 
+stops =[] 
+stop_lat = []  
+stop_long = []  
 # printing the results in a list 
+
 for node in result.nodes: 
-    print(f'Node: {node.tags.get("name", "Unknown")}, Location: ({node.lat}, {node.lon})') 
-print(len(result.nodes)) 
+    tag = node.tags.get("name", "Unknown") 
+    if tag.startswith("Amsterdam"): #there are some stops with the same name but with Amsterdam in front of it, so this if-statement skips those stops 
+            pass 
+    else: 
+            stop_lat.append(node.lat) 
+            stop_long.append(node.lon) 
+            stops.append(tag) 
+print("The stops are:",set(stops)) #only print the unique stops 
+print("There are",len(set(stops)),"stops") #print how many stops there are 
+
+stops_coords = pd.DataFrame({"name":stops,"lat":stop_lat,"lon":stop_long}) #make a new dataframe with the stops information  
+
+m = folium.Map([stops_coords.lat.mean(), stops_coords.lon.mean()], zoom_start=13,tiles="Cartodbdark_matter") #create a map  
+
+for i in range(stops_coords.shape[0]):  
+  location = [stops_coords.lat.iloc[i], stops_coords.lon.iloc[i],] # add the locations  
+  cafe_name = stops_coords.name.iloc[i] #add the name at the location points  
+  folium.CircleMarker(location=location, tooltip=cafe_name).add_to(m) #add a nice marker  
+display(m) 
+
 ```
-Bushaltes zijn handmatig verkregen door te kijken naar de website van de GVB en Google Maps: 
-Start - Nassauplein: Bus 22 (to Sloterdijk and Muiderpoort) [52.38538340407277, 4.881430461066379] 
-Haarlemmerplein: Bus 22 (to Sloterdijk and Muiderpoort), Bus 18 (to Slotervaart and Centraal), Bus 21 (to Geuzenveld and Centraal), Tram 5 (to Amstelveen Stadshart and Zoutkeetsgracht) [52.38496779311146, 4.883595326000165] 
-Finish – Olympisch Stadion: Bus 62 (to Station Lelylaan and Rivierenbuurt), Tram 24 (to VUmc and Centraal)[52.34396636629443, 4.856894263000401] 
-Olympiaweg: Bus 15 (to Sloterdijk and Station Zuid), Tram 24 (to VUmc and Centraal)[52.345251047340675, 4.858472173464992] 
-Amstelveenseweg: metro 50 (to Gein and Isolatorweg), metro 51 (to Centraal and Isolatorweg)[52.33858597150655, 4.857614965924259] 
-[GVB](https://reisinfo.gvb.nl/nl/haltes/07121)
+
  
 A bus in Amsterdam has a maximum capacity of 150 passengers [GVB](https://over.gvb.nl/ov-in-amsterdam/voer-en-vaartuigen/bus-in-cijfers/)
 A tram in Amsterdam has a maximum capacity of 151 passengers [GVB](https://over.gvb.nl/ov-in-amsterdam/voer-en-vaartuigen/tram-in-cijfers/)
 A metro in Amsterdam has a maximum capacity of 480 passengers [GVB](https://over.gvb.nl/content/uploads/2018/11/Factsheet-CAF-GVB-M7-metro-voor-Amsterdam.pdf)
  
 Looking at the GVB website schedule we could detact that the metro leaves every 10 minutes (6 times in an hour), the busses and trams at the finish run every 15 minutes (4 times in an hour) and the busses and trams at the start every 10 minutes (6 times in an hour) 
- 
-So a little math gives us the following answer: 
-For Nassauplein: 2 (to Sloterdijk AND to Muiderpoort) * 150 (capacity) * 6 (frequency) = 1800 passengers / hour 
-For Haarlemmerplein: (6 * 150 * 6) + (2 * 151 *6) = 7212 passengers / hour 
-For Olympisch Stadion: (2 *150 * 4) + (2 * 151 * 4) = 2408 passengers / hour 
-For Olympiaweg: (2 *150 * 4) + (2 * 151 * 4) = 2408 passengers / hour 
-For Amstelveenseweg: 4 *480 * 6 = 11520 passengers / hour 
-Off course all calculated with python.
 
 #### In summary: 
 The Start can transport 9012 passengers / hour 
