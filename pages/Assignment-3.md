@@ -43,13 +43,15 @@ fig.show()
 
 ### Which street in Amsterdam has the most AirBnB apartments?
 ```python
+#warning it costs 71 minutes to run
 import itertools 
-airbnb_oudwest = airbnb[airbnb.neighbourhood == "De Baarsjes - Oud-West"] #filter on the neighbourhood with the most airbnbs 
 geolocator = Nominatim(user_agent="AMS") 
-latitude = airbnb_oudwest['latitude'].tolist() #add the airbnbs lat to a list 
-longitude = airbnb_oudwest['longitude'].tolist() #add the airbnbs lon to a list 
+latitude = airbnb['latitude'].tolist() #add the airbnbs lat to a list 
+longitude = airbnb['longitude'].tolist() #add the airbnbs lon to a list 
+
 streets = [] #make a new street list 
 for lat, lon in zip(latitude, longitude): #zip makes it possible to use two lists at the same time 
+
     coor = str(lat),str(lon) #coordinates of the airbnbs 
     address = geolocator.reverse(coor, zoom=16) #reverse geocode the coordinates, zoom=16 makes sure you only get the streets 
     streets.append(address.address) #add the addresses to the streetlist 
