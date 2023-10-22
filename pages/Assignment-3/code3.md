@@ -62,7 +62,7 @@ bbga = pd.read_excel("PASTE THE PATH TO THE BBGA FILE") # Read the BBGA file
 bbga_2018 = bbga[bbga.jaar == 2018] #filter on the first year there is a full dataframe
 fig = histogram(bbga_2018, x="gebiednaam", y = "BHVESTAIRBNB", text_auto=True) #create a similar histogram but with BBGA
 fig.update_layout(height=500,title_text='Airbnb count per neighbourhood BBGA') 
-fig.show()# You can compare on the webiste (by saying the amounts are higher than the airbnb listings and by saying that there are more neighbourhoods than the airbnb listings)
+fig.show()
 total_amsterdam = bbga_2018._get_value(3926, 'BHVESTAIRBNB') #get the total amount 
 percentage = 100 - (len(airbnb) / total_amsterdam * 100) #divide total availability of the listings list by the total availiability of BBGA*100%
 print(percentage,"% is not always rented out but also used as normal housing") # This is the amount not on the airbnb site but registered as airbnb, this means people also live there 
