@@ -39,7 +39,7 @@ fig.update_layout(height=500,title_text='Airbnb count per neighbourhood')
 fig.show() 
 ```
 <img width="1073" alt="image" src="https://github.com/iepebouw/data1/assets/145610700/5b57a39a-855b-483e-9ace-dab4759272cf">
-<img width="1074" alt="image" src="https://github.com/iepebouw/data1/assets/145610700/64ba9107-b903-4cb1-a46f-fdcbcd391213">
+
 
 ### Which street in Amsterdam has the most AirBnB apartments?
 ```python
@@ -72,6 +72,8 @@ percentage = 100 - (len(airbnb) / total_amsterdam * 100) #divide total availabil
 print(percentage,"% is not always rented out but also used as normal housing") # This is the amount not on the airbnb site but registered as airbnb, this means people also live there 
 ```
 71.01579511284692 % is not always rented out but also used as normal housing
+
+<img width="1074" alt="image" src="https://github.com/iepebouw/data1/assets/145610700/64ba9107-b903-4cb1-a46f-fdcbcd391213">
 
 ### How many hotel rooms should be built if Amsterdam wants to accommodate the same number of tourists?
 
