@@ -21,7 +21,7 @@ If you run the code in Python, you get the interactive map with all the cafes an
 
 ### Preparation
 
-To prepare the data for this assignment we used the folowing steps:
+To prepare the data for this assignment we used the following steps:
 
 ``` python
 import pandas as pd 
@@ -69,20 +69,31 @@ fig, ax = ox.plot_graph_route(city,race,bbox=bbox)
 ### Find the centre of the nodes of the swimming route.
 
 ```python
-#Create two emptie lists, one for the latitude and one for the longtitude:
+import folium 
+#Create empty list for latitude and longtitude 
+
 lat = [] 
 long = [] 
-#Calculate the latitude and longtitude for each point and put them in the corresponding list:
+
+#For every node in rade calculate the following
+
 for node in race: 
-    y = city.nodes[node]["y"]#request the latitude
-    lat.append(y)#Add to the list
-    x = city.nodes[node]["x"]#request the longtitude
-    long.append(x)#Add to the list
-  
-#To calculate the centre you sum the latitudes and divide them over the amount of points (calculate the average). 
+    y = city.nodes[node]["y"]#vraag de hoogtegrade op 
+    lat.append(y)#voeg hem toe aan de lijst 
+    x = city.nodes[node]["x"]#vraag de breedtegrade op 
+    long.append(x)#voeg hem toe aan de lijst 
+
+#to find the center of the nodes, sum all results and calculate mean 
 print(sum(lat)/len(lat)) 
-# DO the same for the longtitudes
-print(sum(long)/len(long))
+centr_node_lat = [sum(lat)/len(lat)] 
+print(sum(long)/len(long)) 
+centr_node_long = [sum(long)/len(long)] 
+
+m = folium.Map([centr_node_lat[0], centr_node_long[0]], zoom_start=13,tiles="Cartodbdark_matter") #create a map  
+location = [centr_node_lat[0], centr_node_long[0]] # add the locations  
+cafe_name = "Centre Node" #add the name at the location points  
+folium.CircleMarker(location=location, tooltip=cafe_name).add_to(m) #add a nice marker  
+display(m) 
 ```
 
 ### Use the centre to find a suitable spot for the Event Headquarters.
