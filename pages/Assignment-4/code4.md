@@ -16,9 +16,8 @@ _make sure the following libraries are installed:_
 - Matplotlib
 - Osmnx
 - Networkx
-- overpy
-
-Runtime code: Around 1m 30s
+- Overpy
+- Folium
 
 ```python
 import pandas as pd 
@@ -30,15 +29,17 @@ import networkx as nx
 
 #Get Amsterdam as a graph, we only want to see the canals and rivers (waterways)
 city = (ox.graph_from_place('Amsterdam, Netherlands',custom_filter=["waterway"])) 
-print(city)
+print(city) 
 
 #Starting point of the race
 start = ox.geocode("Haarlemmerplein 50, 1013 HS Amsterdam") 
-print(start)
+print(start) 
 
+#Endpoint of the race
 eind = ox.geocode("Olympisch Stadion 2, 1076 DE Amsterdam") 
-print(eind)
+print(eind) 
 
+#Closest point in the graph for the start- and endpoint 
 start_node = ox.distance.nearest_nodes(city, start[1], start[0], return_dist=False) 
 eind_node = ox.distance.nearest_nodes(city, eind[1], eind[0], return_dist=False) 
 print(start_node,eind_node)
@@ -52,48 +53,106 @@ pt = ox.graph_to_gdfs(city, edges=False).unary_union.centroid
 bbox = ox.utils_geo.bbox_from_point(start, dist=5000) 
 fig, ax = ox.plot_graph_route(city,race,bbox=bbox)
 
-
-
 #-------------------------------------------------------------------------------------------------
 
-#Create two empty lists, one for the latitude and one for the longtitude:
+import folium 
+#Create empty list for latitude and longtitude 
+
 lat = [] 
 long = [] 
-#Calculate the latitude and longtitude for each point and put them in the corresponding list:
+
+#For every node in rade calculate the following
+
 for node in race: 
-    y = city.nodes[node]["y"]#request the latitude
-    lat.append(y)#Add to the list
-    x = city.nodes[node]["x"]#request the longtitude
-    long.append(x)#Add to the list
-  
-#To calculate the centre you sum the latitudes and divide them over the amount of points (calculate the average). 
+    y = city.nodes[node]["y"]#vraag de hoogtegrade op 
+    lat.append(y)#voeg hem toe aan de lijst 
+    x = city.nodes[node]["x"]#vraag de breedtegrade op 
+    long.append(x)#voeg hem toe aan de lijst 
+
+#to find the center of the nodes, sum all results and calculate mean 
 print(sum(lat)/len(lat)) 
-# DO the same for the longtitudes
-print(sum(long)/len(long))
+centr_node_lat = [sum(lat)/len(lat)] 
+print(sum(long)/len(long)) 
+centr_node_long = [sum(long)/len(long)] 
+
+m = folium.Map([centr_node_lat[0], centr_node_long[0]], zoom_start=13,tiles="Cartodbdark_matter") #create a map  
+location = [centr_node_lat[0], centr_node_long[0]] # add the locations  
+cafe_name = "Centre Node" #add the name at the location points  
+folium.CircleMarker(location=location, tooltip=cafe_name).add_to(m) #add a nice marker  
+display(m) 
 
 #-------------------------------------------------------------------------------------------------
 
 import overpy 
-walking_radius = 500 #We decided on a 500 meter radius 
- 
+walking_radius = 300 #We decided on a 300 meter radius 
 # getting information about public transport stops 
 query = f""" 
     [out:json]; 
     ( 
+
         node["public_transport"="stop_position"] 
+
             (around:{walking_radius},{start[0]},{start[1]}); 
+
         node["public_transport"="stop_position"] 
+
             (around:{walking_radius},{eind[0]},{eind[1]}); 
+
     ); 
+
     out center; 
 """ 
 api = overpy.Overpass() 
 result = api.query(query) 
- 
+stops =[] 
+stop_lat = []  
+stop_long = []  
 # printing the results in a list 
+
 for node in result.nodes: 
-    print(f'Node: {node.tags.get("name", "Unknown")}, Location: ({node.lat}, {node.lon})') 
-print(len(result.nodes)) 
+    tag = node.tags.get("name", "Unknown") 
+    if tag.startswith("Amsterdam"): #there are some stops with the same name but with Amsterdam in front of it, so this if-statement skips those stops 
+            pass 
+    else: 
+            stop_lat.append(node.lat) 
+            stop_long.append(node.lon) 
+            stops.append(tag) 
+print("The stops are:",set(stops)) #only print the unique stops 
+print("There are",len(set(stops)),"stops") #print how many stops there are 
+
+stops_coords = pd.DataFrame({"name":stops,"lat":stop_lat,"lon":stop_long}) #make a new dataframe with the stops information  
+
+m = folium.Map([stops_coords.lat.mean(), stops_coords.lon.mean()], zoom_start=13,tiles="Cartodbdark_matter") #create a map  
+
+for i in range(stops_coords.shape[0]):  
+  location = [stops_coords.lat.iloc[i], stops_coords.lon.iloc[i],] # add the locations  
+  cafe_name = stops_coords.name.iloc[i] #add the name at the location points  
+  folium.CircleMarker(location=location, tooltip=cafe_name).add_to(m) #add a nice marker  
+display(m) 
+
+tram = 151 
+bus = 150 
+
+def passengers_an_hour(line,capacity,freq): 
+    nmbr = capacity * freq 
+    return nmbr,print("The amount of people that can be transported with line",line,"is",nmbr) 
+
+#For Haarlemmerplein 
+bus22 = passengers_an_hour(22,bus,6) 
+bus18 = passengers_an_hour(18,bus,6) 
+tram5 = passengers_an_hour(5,tram,6) 
+
+#For Olympisch Stadion 
+bus62 = passengers_an_hour(62,bus,4) 
+tram24 = passengers_an_hour(24,tram,4) 
+
+#For Olympiaweg 
+bus15 = passengers_an_hour(15,bus,4) 
+tram24 = passengers_an_hour(24,tram,4) 
+
+#For Jan Wilsbrug isn't actually a stop so that's an error of the tagging 
+print("The total amount of passengers that can be transported an hour is",(bus22[0]+bus18[0]+tram5[0]),"at the start") 
+print("The total amount of passengers that can be transported an hour is",(bus62[0]+tram24[0]+bus15[0]+tram24[0]),"at the finish")
 
 #-------------------------------------------------------------------------------------------------
 
@@ -108,7 +167,7 @@ centraal = ox.geocode("Wenslauerstraat 1C, 1053AV, Amsterdam")
 start_node = ox.distance.nearest_nodes(city1, start[1], start[0], return_dist=False) 
 eind_node = ox.distance.nearest_nodes(city1, eind[1], eind[0], return_dist=False) 
 centr_node = ox.distance.nearest_nodes(city1, centraal[1], centraal[0], return_dist=False) 
-print(start_node,eind_node,centr_node)
+print(start_node,eind_node,centr_node) 
 
 #Now we calculate the centrality
 punten = [start_node,eind_node,centr_node] 
