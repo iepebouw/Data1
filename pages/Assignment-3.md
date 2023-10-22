@@ -81,6 +81,15 @@ print(percentage,"% is not always rented out but also used as normal housing") #
 
 <img width="1074" alt="image" src="https://github.com/iepebouw/data1/assets/145610700/64ba9107-b903-4cb1-a46f-fdcbcd391213">
 
+##### Can you figure out if all apartments of AirBnB are designated as housing?
+See above result, it shows that not all the apartments are always designated as housing.
+
+#### Which number of apartments are not rented out all the time but are also used as normal housing?
+```python
+print("apartments also used as normal housing:,"total_amsterdam-len(airbnb))
+```
+apartments also used as normal housing: 20547.0
+
 ### How many hotel rooms should be built if Amsterdam wants to accommodate the same number of tourists?
 
 According to [Airbtics](https://airbtics.com/airbnb-occupancy-rates-by-city/) is on average 37% of all airbnbs occupied, which means we can use 63% of the listings.csv file.
