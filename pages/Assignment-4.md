@@ -34,37 +34,30 @@ import networkx as nx
 #Get Amsterdam as a graph, we only want to see the canals and rivers (waterways)
 city = (ox.graph_from_place('Amsterdam, Netherlands',custom_filter=["waterway"])) 
 print(city) 
-```
-```python
+
 #Starting point of the race
 start = ox.geocode("Haarlemmerplein 50, 1013 HS Amsterdam") 
 print(start) 
-```
-```python
+
 #Endpoint of the race
 eind = ox.geocode("Olympisch Stadion 2, 1076 DE Amsterdam") 
 print(eind) 
-```
 
-```python
 #Closest point in the graph for the start- and endpoint 
 start_node = ox.distance.nearest_nodes(city, start[1], start[0], return_dist=False) 
 eind_node = ox.distance.nearest_nodes(city, eind[1], eind[0], return_dist=False) 
 print(start_node,eind_node)
-```
 
-```python
 #To calculate the (shortest) race route between these two nodes:
 race = ox.shortest_path(city, start_node, eind_node) 
 print(race)
-```
 
-```python
 #To give a visualisation of this race route
 pt = ox.graph_to_gdfs(city, edges=False).unary_union.centroid 
 bbox = ox.utils_geo.bbox_from_point(start, dist=5000) 
 fig, ax = ox.plot_graph_route(city,race,bbox=bbox)
 ```
+<img width="615" alt="image" src="https://github.com/iepebouw/data1/assets/145610700/c179e566-a4ef-47e9-af69-7b6641f460d8">
 
 ### Find the centre of the nodes of the swimming route.
 
