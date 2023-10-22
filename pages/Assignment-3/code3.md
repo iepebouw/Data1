@@ -23,6 +23,10 @@ _Go to [Airbnbn](http://data.insideairbnb.com/the-netherlands/north-holland/amst
 _go to [BBGA](https://onderzoek.amsterdam.nl/dataset/basisbestand-gebieden-amsterdam-bbga) and download the 'Het BBGA inclusief metadata in xlsx formaat' file. Paste the path on the mentioned place (in CAPITALS) in the code_
 
 ```python
+print("€",30000*3*6) # visitors*tax euros*nights
+
+#-------------------------------------------------------------------------------------------------
+
 import pandas as pd 
 from pandas import DataFrame 
 import matplotlib.pyplot as plt 
