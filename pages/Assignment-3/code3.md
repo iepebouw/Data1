@@ -13,10 +13,11 @@ Below the complete code for excercise 4. Just copy/paste in the top right corner
 
 _make sure the following libraries are installed:_
 - Pandas
-- Matplotlib
+- Matplotlib.pyplot
 - Osmnx
-- plotly
+- plotly.express
 - Openpyxl
+- Itertools
 
 _Go to [Airbnbn](http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2023-09-03/visualisations/listings.csv) and download the listings.csv file and paste the path on the mentioned place (in CAPITALS) in the code_
 
@@ -34,7 +35,7 @@ import osmnx as ox
 from geopy.geocoders import Nominatim 
 import plotly.express as px 
 from plotly.express import histogram  
-airbnb = pd.read_csv("PASTE THE PATH TO THE LISTINGS.CSV FILE") # read Airbnb file
+airbnb = pd.read_csv(""PASTE THE PATH TO THE listings.csv FILE"") # read Airbnb file
 airbnb.head() # print first five colums
 fig = histogram(airbnb, x="neighbourhood", text_auto=True) 
 fig.update_layout(height=500,title_text='Airbnb count per neighbourhood') 
@@ -42,13 +43,15 @@ fig.show()
 
 #-------------------------------------------------------------------------------------------------
 
+#warning it costs 71 minutes to run
 import itertools 
-airbnb_oudwest = airbnb[airbnb.neighbourhood == "De Baarsjes - Oud-West"] #filter on the neighbourhood with the most airbnbs 
 geolocator = Nominatim(user_agent="AMS") 
-latitude = airbnb_oudwest['latitude'].tolist() #add the airbnbs lat to a list 
-longitude = airbnb_oudwest['longitude'].tolist() #add the airbnbs lon to a list 
+latitude = airbnb['latitude'].tolist() #add the airbnbs lat to a list 
+longitude = airbnb['longitude'].tolist() #add the airbnbs lon to a list 
+
 streets = [] #make a new street list 
 for lat, lon in zip(latitude, longitude): #zip makes it possible to use two lists at the same time 
+
     coor = str(lat),str(lon) #coordinates of the airbnbs 
     address = geolocator.reverse(coor, zoom=16) #reverse geocode the coordinates, zoom=16 makes sure you only get the streets 
     streets.append(address.address) #add the addresses to the streetlist 
@@ -58,7 +61,7 @@ print("The street with the most Airbnbs is:",most_frequent(streets),"and it has"
 
 #-------------------------------------------------------------------------------------------------
 
-bbga = pd.read_excel("PASTE THE PATH TO THE BBGA FILE") # Read the BBGA file 
+bbga = pd.read_excel(""PASTE THE PATH TO THE BBGA FILE"") # Read the BBGA file 
 bbga_2018 = bbga[bbga.jaar == 2018] #filter on the first year there is a full dataframe
 fig = histogram(bbga_2018, x="gebiednaam", y = "BHVESTAIRBNB", text_auto=True) #create a similar histogram but with BBGA
 fig.update_layout(height=500,title_text='Airbnb count per neighbourhood BBGA') 
@@ -67,6 +70,7 @@ total_amsterdam = bbga_2018._get_value(3926, 'BHVESTAIRBNB') #get the total amou
 percentage = 100 - (len(airbnb) / total_amsterdam * 100) #divide total availability of the listings list by the total availiability of BBGA*100%
 print(percentage,"% is not always rented out but also used as normal housing") # This is the amount not on the airbnb site but registered as airbnb, this means people also live there 
 
+print("apartments also used as normal housing:,"total_amsterdam-len(airbnb))
 #-------------------------------------------------------------------------------------------------
 
 #If we assume every Airbnb has two persons renting:
@@ -81,5 +85,5 @@ else:
 
 #-------------------------------------------------------------------------------------------------
 
-print(len(airbnb["license"].unique()))
+print("There are",len(airbnb["license"].unique()),"different licences") 
 ```
