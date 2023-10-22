@@ -56,7 +56,7 @@ fig, ax = ox.plot_graph_route(city,race,bbox=bbox)
 
 #-------------------------------------------------------------------------------------------------
 
-#Create two emptie lists, one for the latitude and one for the longtitude:
+#Create two empty lists, one for the latitude and one for the longtitude:
 lat = [] 
 long = [] 
 #Calculate the latitude and longtitude for each point and put them in the corresponding list:
