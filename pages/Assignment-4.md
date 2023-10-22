@@ -89,6 +89,7 @@ folium.CircleMarker(location=location, tooltip=cafe_name).add_to(m) #add a nice 
 display(m) 
 ```
 Centre node of the swimming route:
+
 <img width="637" alt="image" src="https://github.com/iepebouw/data1/assets/145610700/3c1cacc4-395b-4ef9-afee-3803572ba4f6">
 
 ### Use the centre to find a suitable spot for the Event Headquarters.
@@ -206,26 +207,27 @@ See answer on previous question
 ### Calculate the centrality of the start, finish, and centre node of the route. Which centrality calculation makes the most sense. [See this link.](https://networkx.org/documentation/stable/reference/algorithms/centrality.html)
 For this excercise we want to know the centrality of the three nodes. How accessible start is to finish, and how accessible the centre is from/to the start and finish. Therefore the closeness centrality calculation is the best suitable option for this calculation.
 
+
 ```python
 #Calculate the nearest location to these coordinates with reverse geocoding:
 from geopy.geocoders import Nominatim
 geolocator = Nominatim(user_agent="AMS")
 location = geolocator.reverse("52.3675863, 4.8659963")
 print(location)
-```
-```python
+
 #We calculate the nearest node for location
 centraal = ox.geocode("Wenslauerstraat 1C, 1053AV, Amsterdam") 
 start_node = ox.distance.nearest_nodes(city1, start[1], start[0], return_dist=False) 
 eind_node = ox.distance.nearest_nodes(city1, eind[1], eind[0], return_dist=False) 
 centr_node = ox.distance.nearest_nodes(city1, centraal[1], centraal[0], return_dist=False) 
 print(start_node,eind_node,centr_node) 
-```
-```python
+
 #Now we calculate the centrality
 punten = [start_node,eind_node,centr_node] 
 print("The degree centrality for the three nodes is:",nx.group_closeness_centrality(city1,punten))
 ```
+The Centrality:
+
 1C, Wenslauerstraat, Kinkerbuurt, Oud-West, West, Amsterdam, Noord-Holland, Nederland, 1053 AV, Nederland
 46447625 298097398 46367797
 The degree centrality for the three nodes is: 0.02004401535297431
@@ -271,8 +273,39 @@ for i in range(cafe_coords.shape[0]):
   folium.CircleMarker(location=location, tooltip=cafe_name).add_to(m) #add a nice marker 
 display(m)
 ```
+_(run the code yourself to create an interactive map:)_
 
 ![image](https://github.com/iepebouw/data1/assets/145610700/b8d74cec-c4a2-48e9-a3dd-ba2d91e0746d)
 
+Cafes and restaurants:
+
+Harbour Club Café, 35, Olympisch Stadion, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 DE, Nederland
+Kiebert, Marathonweg, Stadionbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 TH, Nederland
+The Red Sun, Olympiaplein, Stadionbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 AL, Nederland
+Faa Thai, 10, Marathonweg, Stadionbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 TE, Nederland
+Bar Café Louis Davids - Schinkel, 85, Rijnsburgstraat, Hoofddorperpleinbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1059 AT, Nederland
+Tuin van Zuid, 1, Karperweg, Zuid, Amsterdam, Noord-Holland, Nederland, 1075 LA, Nederland
+Café Carbòn, 312-1, Amstelveenseweg, Olympisch Kwartier, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 CS, Nederland
+Golden Thali, 118, Olympiaplein, Stadionbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 AK, Nederland
+Eetcafé de Hut, 132, Olympiaplein, Stadionbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 AK, Nederland
+Sloppy Joe, 13, Stadionplein, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 CE, Nederland
+La cucina di Nonna Francesca, 145, Stadionweg, Stadionbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 NM, Nederland
+Bagel Best, 148, Olympiaplein, Stadionbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 AL, Nederland
+Jack Dish, 19-H, Stadionplein, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 CG, Nederland
+Asian Flavours, 245-1, Stadionweg, Stadionbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 NX, Nederland
+Cucina Casalinga, 271-H, Stadionweg, Stadionbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 NZ, Nederland
+Slowthbrunch, 3, Baarsstraat, Schinkelbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1075 RT, Nederland
+Mr. Sam Asian Bistro, 344, Amstelveenseweg, Olympisch Kwartier, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 CT, Nederland
+Vascobelo, 96, Aalsmeerweg, Hoofddorperpleinbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1059 AN, Nederland
+Warung Barokah, 91, Aalsmeerweg, Hoofddorperpleinbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1059 AE, Nederland
+Vascobelo, Stadionplein, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 CE, Nederland
+Palante, 97A, Fred. Roeskestraat, Zuidas, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 EC, Nederland
+Atelier, Valschermkade, Bedrijventerrein Schinkel, Zuid, Amsterdam, Noord-Holland, Nederland, 1059 CC, Nederland
+De Drie Graefjes, 111, Stadionplein, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 CK, Nederland
+CINQ Oriental Bistro, IJsbaanpad, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 CV, Nederland
+Chopstick District, IJsbaanpad, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 EL, Nederland
+NENI, Stadionplein, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 CM, Nederland
+Wils, 26, Stadionplein, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 CM, Nederland
+Swagat, 247, Stadionweg, Stadionbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 NX, Nederland
 
 Go to the first assignment: [Paralympics]({{site.baseurl}}/assignment-1)
