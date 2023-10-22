@@ -141,7 +141,6 @@ for i in range(stops_coords.shape[0]):
   cafe_name = stops_coords.name.iloc[i] #add the name at the location points  
   folium.CircleMarker(location=location, tooltip=cafe_name).add_to(m) #add a nice marker  
 display(m) 
-
 ```
 
  
@@ -151,9 +150,44 @@ A metro in Amsterdam has a maximum capacity of 480 passengers [GVB](https://over
  
 Looking at the GVB website schedule we could detact that the metro leaves every 10 minutes (6 times in an hour), the busses and trams at the finish run every 15 minutes (4 times in an hour) and the busses and trams at the start every 10 minutes (6 times in an hour) 
 
+```python
+tram = 151 
+bus = 150 
+
+def passengers_an_hour(line,capacity,freq): 
+    nmbr = capacity * freq 
+    return nmbr,print("The amount of people that can be transported with line",line,"is",nmbr) 
+
+#For Haarlemmerplein 
+bus22 = passengers_an_hour(22,bus,6) 
+bus18 = passengers_an_hour(18,bus,6) 
+tram5 = passengers_an_hour(5,tram,6) 
+
+#For Olympisch Stadion 
+bus62 = passengers_an_hour(62,bus,4) 
+tram24 = passengers_an_hour(24,tram,4) 
+
+#For Olympiaweg 
+bus15 = passengers_an_hour(15,bus,4) 
+tram24 = passengers_an_hour(24,tram,4) 
+
+#For Jan Wilsbrug isn't actually a stop so that's an error of the tagging 
+print("The total amount of passengers that can be transported an hour is",(bus22[0]+bus18[0]+tram5[0]),"at the start") 
+print("The total amount of passengers that can be transported an hour is",(bus62[0]+tram24[0]+bus15[0]+tram24[0]),"at the finish")
+
+The amount of people that can be transported with line 22 is 900 
+The amount of people that can be transported with line 18 is 900 
+The amount of people that can be transported with line 5 is 906 
+The amount of people that can be transported with line 62 is 600 
+The amount of people that can be transported with line 24 is 604 
+The amount of people that can be transported with line 15 is 600 
+The amount of people that can be transported with line 24 is 604  
+```
+
 #### In summary: 
-The Start can transport 9012 passengers / hour 
-The Finish can transport 16336 passengers / hour 
+The total amount of passengers that can be transported an hour is 2706 at the start
+
+The total amount of passengers that can be transported an hour is 2408 at the finish
 
 ### Can you find which bus and tram lines these are, and can you find their routes?
 See answer on previous question
