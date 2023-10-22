@@ -88,6 +88,8 @@ cafe_name = "Centre Node" #add the name at the location points
 folium.CircleMarker(location=location, tooltip=cafe_name).add_to(m) #add a nice marker  
 display(m) 
 ```
+Centre node of the swimming route:
+<img width="637" alt="image" src="https://github.com/iepebouw/data1/assets/145610700/3c1cacc4-395b-4ef9-afee-3803572ba4f6">
 
 ### Use the centre to find a suitable spot for the Event Headquarters.
 
