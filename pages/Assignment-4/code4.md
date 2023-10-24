@@ -161,6 +161,7 @@ from geopy.geocoders import Nominatim
 geolocator = Nominatim(user_agent="AMS")
 location = geolocator.reverse("52.3675863, 4.8659963")
 print(location)
+city1 = (ox.graph_from_place('Amsterdam, Netherlands'))
 
 #We calculate the nearest node for location
 centraal = ox.geocode("Wenslauerstraat 1C, 1053AV, Amsterdam") 
