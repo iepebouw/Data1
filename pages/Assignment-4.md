@@ -276,7 +276,6 @@ display(m)
 _(run the code yourself to create an interactive map:)_
 
 ![image](https://github.com/iepebouw/data1/assets/145610700/b8d74cec-c4a2-48e9-a3dd-ba2d91e0746d)
-![Map1](https://github.com/iepebouw/data1/blob/main/assets/Map1.html)
 
 
 Cafes and restaurants:
