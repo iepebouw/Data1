@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_bbc4009a5ba15b89c76eee343dc978fe {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_bbc4009a5ba15b89c76eee343dc978fe" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_bbc4009a5ba15b89c76eee343dc978fe = L.map(
+                "map_bbc4009a5ba15b89c76eee343dc978fe",
+                {
+                    center: [52.345389925, 4.857596932142857],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 15,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ec2e356ced901a69edcece9d089f2687 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            var circle_marker_3a5482b8f5348f40598e219b21fb8a9f = L.circleMarker(
+                [52.3424865, 4.854536],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_3a5482b8f5348f40598e219b21fb8a9f.bindTooltip(
+                `<div>
+                     Harbour Club Café, 35, Olympisch Stadion, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 DE, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_035c02a8a71331a87f9028b726467b97 = L.circleMarker(
+                [52.348342, 4.8606049],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_035c02a8a71331a87f9028b726467b97.bindTooltip(
+                `<div>
+                     Kiebert, Marathonweg, Stadionbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 TH, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_854d3cb2a036aa83d8a843f2cc11637e = L.circleMarker(
+                [52.3460697, 4.8662367],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_854d3cb2a036aa83d8a843f2cc11637e.bindTooltip(
+                `<div>
+                     The Red Sun, Olympiaplein, Stadionbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 AL, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_56a8f61dee2713f89cdac1696f40a0db = L.circleMarker(
+                [52.3482413, 4.8609154],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_56a8f61dee2713f89cdac1696f40a0db.bindTooltip(
+                `<div>
+                     Faa Thai, 10, Marathonweg, Stadionbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 TE, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_104cfbc1c25b08091fa7b7c9e18fa9dd = L.circleMarker(
+                [52.3465665, 4.8473549],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_104cfbc1c25b08091fa7b7c9e18fa9dd.bindTooltip(
+                `<div>
+                     Bar Café Louis Davids - Schinkel, 85, Rijnsburgstraat, Hoofddorperpleinbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1059 AT, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a7e6f889936c084edfad5afc47fcd3e0 = L.circleMarker(
+                [52.3485973, 4.8570801],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_a7e6f889936c084edfad5afc47fcd3e0.bindTooltip(
+                `<div>
+                     Tuin van Zuid, 1, Karperweg, Zuid, Amsterdam, Noord-Holland, Nederland, 1075 LA, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_36ef8eb4257f17bee734694a110ea46b = L.circleMarker(
+                [52.346165, 4.8572197],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_36ef8eb4257f17bee734694a110ea46b.bindTooltip(
+                `<div>
+                     Café Carbòn, 312-1, Amstelveenseweg, Olympisch Kwartier, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 CS, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_be218363ff92b03f6d1f04019c8d62d0 = L.circleMarker(
+                [52.3468294, 4.8656872],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_be218363ff92b03f6d1f04019c8d62d0.bindTooltip(
+                `<div>
+                     Golden Thali, 118, Olympiaplein, Stadionbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 AK, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_aa1499751d0f37928f699c2050283b29 = L.circleMarker(
+                [52.3464138, 4.8652078],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_aa1499751d0f37928f699c2050283b29.bindTooltip(
+                `<div>
+                     Eetcafé de Hut, 132, Olympiaplein, Stadionbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 AK, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d660f9cbad22fb11c7b55e6497a0aeda = L.circleMarker(
+                [52.34455, 4.8583911],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_d660f9cbad22fb11c7b55e6497a0aeda.bindTooltip(
+                `<div>
+                     Sloppy Joe, 13, Stadionplein, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 CE, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5f8b57b17eb51675af69cd09c2a0f5d1 = L.circleMarker(
+                [52.3459808, 4.864846],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_5f8b57b17eb51675af69cd09c2a0f5d1.bindTooltip(
+                `<div>
+                     La cucina di Nonna Francesca, 145, Stadionweg, Stadionbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 NM, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_337657658480cf43229c6b182e8a025b = L.circleMarker(
+                [52.3460116, 4.8657262],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_337657658480cf43229c6b182e8a025b.bindTooltip(
+                `<div>
+                     Bagel Best, 148, Olympiaplein, Stadionbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 AL, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_099f99bf4ede62636b750456bbcb61f1 = L.circleMarker(
+                [52.3444136, 4.8584023],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_099f99bf4ede62636b750456bbcb61f1.bindTooltip(
+                `<div>
+                     Jack Dish, 19-H, Stadionplein, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 CG, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5ec7e608c9d76cfffb392ef84c08b4d3 = L.circleMarker(
+                [52.3452473, 4.8595568],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_5ec7e608c9d76cfffb392ef84c08b4d3.bindTooltip(
+                `<div>
+                     Asian Flavours, 245-1, Stadionweg, Stadionbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 NX, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_806f850c7cf29fede62b43f8b03ba4fd = L.circleMarker(
+                [52.3448849, 4.8590476],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_806f850c7cf29fede62b43f8b03ba4fd.bindTooltip(
+                `<div>
+                     Cucina Casalinga, 271-H, Stadionweg, Stadionbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 NZ, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9ff0269712940ab7631b66e0d711e6db = L.circleMarker(
+                [52.3506538, 4.8543991],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_9ff0269712940ab7631b66e0d711e6db.bindTooltip(
+                `<div>
+                     Slowthbrunch, 3, Baarsstraat, Schinkelbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1075 RT, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_66a761069de2fe9f334748940bb18a6d = L.circleMarker(
+                [52.34551, 4.8572328],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_66a761069de2fe9f334748940bb18a6d.bindTooltip(
+                `<div>
+                     Mr. Sam Asian Bistro, 344, Amstelveenseweg, Olympisch Kwartier, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 CT, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0df31443d2704b623d6bffc93476574e = L.circleMarker(
+                [52.3480869, 4.8474921],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_0df31443d2704b623d6bffc93476574e.bindTooltip(
+                `<div>
+                     Vascobelo, 96, Aalsmeerweg, Hoofddorperpleinbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1059 AN, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3eb5d7b4c7d7e8d24ba7713eb82d7a4f = L.circleMarker(
+                [52.3480826, 4.8479616],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_3eb5d7b4c7d7e8d24ba7713eb82d7a4f.bindTooltip(
+                `<div>
+                     Warung Barokah, 91, Aalsmeerweg, Hoofddorperpleinbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1059 AE, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bdb0fd50d479b7cd68b3b0871d1ac7f6 = L.circleMarker(
+                [52.3443938, 4.8579499],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_bdb0fd50d479b7cd68b3b0871d1ac7f6.bindTooltip(
+                `<div>
+                     Vascobelo, Stadionplein, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 CE, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ea87db8cd24e43c5514c552dca0d5101 = L.circleMarker(
+                [52.3410341, 4.8637913],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_ea87db8cd24e43c5514c552dca0d5101.bindTooltip(
+                `<div>
+                     Handel Amsterdam, 95-97, Fred. Roeskestraat, Zuidas, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 EC, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3568165b5cd1e982b0e836027c92fa5e = L.circleMarker(
+                [52.3422335, 4.8444668],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_3568165b5cd1e982b0e836027c92fa5e.bindTooltip(
+                `<div>
+                     Atelier, Valschermkade, Bedrijventerrein Schinkel, Zuid, Amsterdam, Noord-Holland, Nederland, 1059 CC, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_cc660ada13737b92ec9ac60068da661c = L.circleMarker(
+                [52.3442976, 4.8574819],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_cc660ada13737b92ec9ac60068da661c.bindTooltip(
+                `<div>
+                     De Drie Graefjes, 111, Stadionplein, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 CK, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_92ed5b72129d5cab2b950cdc262fe1fc = L.circleMarker(
+                [52.3413856, 4.8532672],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_92ed5b72129d5cab2b950cdc262fe1fc.bindTooltip(
+                `<div>
+                     CINQ Oriental Bistro, IJsbaanpad, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 CV, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d726d45de99c1cd2da4d027c85e4104b = L.circleMarker(
+                [52.3414767, 4.8561356],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_d726d45de99c1cd2da4d027c85e4104b.bindTooltip(
+                `<div>
+                     Chopstick District, IJsbaanpad, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 EL, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1c69818d2788e0b850f46fa8d287f93a = L.circleMarker(
+                [52.3443407, 4.8561472],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_1c69818d2788e0b850f46fa8d287f93a.bindTooltip(
+                `<div>
+                     NENI, Stadionplein, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 CM, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_53cd8e07e948136291b1f49e78d4fe71 = L.circleMarker(
+                [52.3433937, 4.8561571],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_53cd8e07e948136291b1f49e78d4fe71.bindTooltip(
+                `<div>
+                     Wils, 26, Stadionplein, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 CM, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9fe236aa0a8315c670c1eb28b216c645 = L.circleMarker(
+                [52.3452292, 4.8594188],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_bbc4009a5ba15b89c76eee343dc978fe);
+        
+    
+            circle_marker_9fe236aa0a8315c670c1eb28b216c645.bindTooltip(
+                `<div>
+                     Swagat, 247, Stadionweg, Stadionbuurt, Zuid, Amsterdam, Noord-Holland, Nederland, 1076 NX, Nederland
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
